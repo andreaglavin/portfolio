@@ -1,0 +1,10 @@
+/* =============================================================================
+   DESIGN SYSTEM ENTRY POINT
+   Import order matters: tokens → typography → reset → animations.
+   Imported once in src/main.tsx.
+   ============================================================================= */
+
+@import './tokens.css';
+@import './typography.css';
+@import './reset.css';
+@import './animations.css';

@@ -1,0 +1,27 @@
+.header {
+  margin-bottom: var(--space-16);
+  max-width: 680px;
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: var(--text-display);
+  margin-bottom: var(--space-5);
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/portfolio/" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <script>
+      // GitHub Pages SPA fallback: any unknown path bounces to the app root.
+      // HashRouter then handles client-side routing from there.
+      var base = '/portfolio/';
+      var path = window.location.pathname;
+      if (path.indexOf(base) === 0) {
+        window.location.replace(base);
+      } else {
+        window.location.replace(base);
+      }
+    </script>
+  </body>
+</html>
