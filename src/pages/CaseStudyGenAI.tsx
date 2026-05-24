@@ -34,7 +34,7 @@ export function CaseStudyGenAI() {
             </div>
             <div className="cs-meta-item">
               <span className="cs-meta-label">Product</span>
-              <span className="cs-meta-value">Actionable Insights — Meta B2B</span>
+              <span className="cs-meta-value">Actionable Insights — Meta's B2B platform for Telecom Partners</span>
             </div>
             <div className="cs-meta-item">
               <span className="cs-meta-label">Impact</span>
@@ -46,9 +46,7 @@ export function CaseStudyGenAI() {
 
       {/* ========== HERO IMAGE (full-bleed) ========== */}
       <div className="cs-image-fullbleed">
-        <div className="cs-image-placeholder cs-image-hero-size">
-          <img src="assets/9o.png" alt="GenAI Filtering Panel on Maps Interface" />
-        </div>
+        <img src="assets/9o.png" alt="GenAI Filtering Panel on Maps Interface" className="cs-hero-img" />
       </div>
 
       {/* ========== CONTEXT + CHALLENGE (side-by-side) ========== */}
@@ -87,8 +85,15 @@ export function CaseStudyGenAI() {
 
       {/* ========== BEFORE/AFTER IMAGE ========== */}
       <div className="cs-image-fullbleed">
-        <div className="cs-image-placeholder">
-          <img src="assets/Manual filters.png" alt="Before vs. After — Cascading Dropdowns vs. Natural Language Panel" />
+        <div className="cs-before-after">
+          <div className="cs-before-after-item">
+            <span className="cs-before-after-label">Before — Cascading Dropdowns</span>
+            <img src="assets/Manual filters.png" alt="Cascading Dropdowns" className="cs-before-after-img" />
+          </div>
+          <div className="cs-before-after-item">
+            <span className="cs-before-after-label">After — Natural Language Panel</span>
+            <img src="assets/13o.png" alt="Natural Language Panel" className="cs-before-after-img" />
+          </div>
         </div>
       </div>
 
@@ -123,20 +128,31 @@ export function CaseStudyGenAI() {
         </div>
       </section>
 
-      {/* ========== THE SOLUTION (text + image side by side) ========== */}
+      {/* ========== THE SOLUTION (text + positioning list, NO image) ========== */}
       <section className="cs-section cs-bg-base">
         <div className="section-container">
-          <div className="cs-two-col cs-two-col-media">
+          <div className="cs-two-col cs-two-col-wide">
             <div className="cs-col">
               <span className="cs-section-label">The Solution</span>
               <h2>GenAI Filtering Panel</h2>
               <p>We built a GenAI filtering panel powered by <strong>Llama 3.3</strong> that allowed users to filter the map using natural language.</p>
-              <p>Prototyping in <strong>Figma Make</strong> allowed us to iterate fast, brainstorm in real-time, and get designs into production much faster.</p>
-              <p>I worked alongside the engineering team, <strong>vibe coding production changes</strong> to level up the quality of the final experience.</p>
             </div>
-            <div className="cs-col cs-col-media">
-              <div className="cs-image-placeholder cs-image-inline">
-                <img src="assets/13o.png" alt="GenAI Filtering Panel — Final Design" />
+            <div className="cs-col">
+              <div className="cs-positioning-list">
+                <div className="cs-positioning-item">
+                  <span className="cs-positioning-icon">→</span>
+                  <div>
+                    <strong>Rapid Prototyping</strong>
+                    <p>Prototyping in Figma Make allowed us to iterate fast, brainstorm in real-time, and get designs into production much faster</p>
+                  </div>
+                </div>
+                <div className="cs-positioning-item">
+                  <span className="cs-positioning-icon">→</span>
+                  <div>
+                    <strong>Design × Engineering</strong>
+                    <p>I worked alongside the engineering team, vibe coding production changes to level up the quality of the final experience</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -214,7 +230,7 @@ export function CaseStudyGenAI() {
         </div>
       </section>
 
-      {/* ========== KEY DESIGN DECISIONS ========== */}
+      {/* ========== KEY DESIGN DECISIONS (all same direction — text left, media right) ========== */}
       <section className="cs-section cs-bg-base cs-decisions-section">
         <div className="section-container">
           <div className="cs-section-header-centered">
@@ -233,27 +249,23 @@ export function CaseStudyGenAI() {
                 <p>A NUX and tutorial draw attention to the entry point for first-time users. After agreeing to terms of service, the AI panel remains open by default. Suggested prompts provide tailored examples, and a "What I can help with" link explains available functionality. An additional entry point in the manual filters prompts: "Need advanced filters? Use AI."</p>
               </div>
               <div className="cs-col cs-col-media">
-                <div className="cs-image-placeholder cs-image-inline">
-                  <video src="assets/GenAI - Tutorial.mp4" autoPlay loop muted playsInline />
-                </div>
+                <video src="assets/GenAI - Tutorial.mp4" className="cs-inline-img" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Decision 2 (reversed) */}
-        <div className="cs-decision cs-decision-reversed">
+        {/* Decision 2 */}
+        <div className="cs-decision">
           <div className="section-container">
             <div className="cs-two-col cs-two-col-media">
-              <div className="cs-col cs-col-media">
-                <div className="cs-image-placeholder cs-image-inline">
-                  <video src="assets/GenAI - Carrousel.mp4" autoPlay loop muted playsInline />
-                </div>
-              </div>
               <div className="cs-col">
                 <span className="cs-decision-num">02</span>
                 <h3>Transparent AI Processing</h3>
                 <p>Once a user prompts the AI, a rotating carousel shows the processing steps — giving users feedback on what's happening during loading. Once results arrive, steps collapse into "reasoning," allowing users to verify that the AI searched through the right things.</p>
+              </div>
+              <div className="cs-col cs-col-media">
+                <video src="assets/GenAI - Carrousel.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -269,27 +281,23 @@ export function CaseStudyGenAI() {
                 <p>The AI's functionality exceeds manual filters. Only one panel is open at a time. The map indicates when AI filters are in use vs. manual. Warning messages ensure users understand that manual filters will override AI results.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <div className="cs-image-placeholder cs-image-inline">
-                  <video src="assets/GenAI - Interoperability.mp4" autoPlay loop muted playsInline />
-                </div>
+                <video src="assets/GenAI - Interoperability.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Decision 4 (reversed) */}
-        <div className="cs-decision cs-decision-reversed">
+        {/* Decision 4 */}
+        <div className="cs-decision">
           <div className="section-container">
             <div className="cs-two-col cs-two-col-media">
-              <div className="cs-col cs-col-media">
-                <div className="cs-image-placeholder cs-image-inline">
-                  <video src="assets/GenAI - Showing results.mp4" autoPlay loop muted playsInline />
-                </div>
-              </div>
               <div className="cs-col">
                 <span className="cs-decision-num">04</span>
                 <h3>Showing Results</h3>
                 <p>The map automatically renders with AI-applied filters. The AI panel displays a summary and specific filter tokens, showing exactly which parameters were applied. If the AI can't produce results, we surface the reason clearly.</p>
+              </div>
+              <div className="cs-col cs-col-media">
+                <video src="assets/GenAI - Showing results.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -305,27 +313,23 @@ export function CaseStudyGenAI() {
                 <p>A new capability enabled exclusively by GenAI. Custom formulas require a unique display in the panel, with tokens highlighting how the metric was calculated and which filters were applied. Additional insights are shown via tooltips on hover.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <div className="cs-image-placeholder cs-image-inline">
-                  <img src="assets/Derived metrics 1.png" alt="Derived Metrics — Tokens & Tooltips" />
-                </div>
+                <img src="assets/Derived metrics 1.png" alt="Derived Metrics — Tokens & Tooltips" className="cs-inline-img cs-img-constrained" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Decision 6 (reversed) */}
-        <div className="cs-decision cs-decision-reversed">
+        {/* Decision 6 */}
+        <div className="cs-decision">
           <div className="section-container">
             <div className="cs-two-col cs-two-col-media">
-              <div className="cs-col cs-col-media">
-                <div className="cs-image-placeholder cs-image-inline">
-                  <video src="assets/GenAI - Actions.mp4" autoPlay loop muted playsInline />
-                </div>
-              </div>
               <div className="cs-col">
                 <span className="cs-decision-num">06</span>
                 <h3>Actions & Feedback</h3>
                 <p>Contextual actions to download and share results help drive engagement. Every AI response includes thumbs up/down feedback to capture quality data, plus a modal for detailed input.</p>
+              </div>
+              <div className="cs-col cs-col-media">
+                <video src="assets/GenAI - Actions.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -428,9 +432,7 @@ export function CaseStudyGenAI() {
       </section>
 
       <div className="cs-image-fullbleed">
-        <div className="cs-image-placeholder">
-          <img src="assets/26.png" alt="Long-Term Vision — Analytics Agent Concept" />
-        </div>
+        <img src="assets/26.png" alt="Long-Term Vision — Analytics Agent Concept" className="cs-hero-img" />
       </div>
 
       {/* ========== RESULTS ========== */}
@@ -480,8 +482,7 @@ export function CaseStudyGenAI() {
       <div className="cs-bottom-nav">
         <div className="section-container">
           <div className="cs-bottom-nav-inner">
-            <a href="#/" className="btn btn-secondary">← All Projects</a>
-            <a href="#/case-study-2" className="btn btn-primary">Next Project →</a>
+            <a href="#/" className="btn btn-secondary">← Back to Work</a>
           </div>
         </div>
       </div>
