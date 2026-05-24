@@ -12,7 +12,7 @@ export function PastWork() {
           <div className="past-work-card">
             <div className="past-work-image">
               <div className="past-work-gif-wrapper">
-                <img src="assets/Gif Xcaret.gif" alt="Xcaret Chatbot" className="past-work-gif-img" />
+                <video src="assets/Gif Xcaret.mp4" className="past-work-gif-img" autoPlay loop muted playsInline />
               </div>
             </div>
             <div className="past-work-content">

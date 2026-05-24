@@ -13,7 +13,7 @@ export function Work() {
           <div className="work-card">
             <div className="work-card-image">
               <div className="work-card-img-wrapper">
-                <img src="assets/GenAI - Showing results.gif" alt="GenAI Filtering Panel" className="work-card-img" />
+                <video src="assets/GenAI - Showing results.mp4" className="work-card-img" autoPlay loop muted playsInline />
               </div>
               <div className="work-card-overlay">
                 <a href="#/case-study-1" className="btn btn-primary">See the Case Study →</a>

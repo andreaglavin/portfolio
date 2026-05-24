@@ -234,7 +234,7 @@ export function CaseStudyGenAI() {
               </div>
               <div className="cs-col cs-col-media">
                 <div className="cs-image-placeholder cs-image-inline">
-                  <img src="assets/GenAI - Tutorial.gif" alt="Feature Discovery — NUX & Suggested Prompts" />
+                  <video src="assets/GenAI - Tutorial.mp4" autoPlay loop muted playsInline />
                 </div>
               </div>
             </div>
@@ -247,7 +247,7 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col cs-col-media">
                 <div className="cs-image-placeholder cs-image-inline">
-                  <img src="assets/GenAI - Carrousel.gif" alt="AI Processing — Loading & Reasoning" />
+                  <video src="assets/GenAI - Carrousel.mp4" autoPlay loop muted playsInline />
                 </div>
               </div>
               <div className="cs-col">
@@ -270,7 +270,7 @@ export function CaseStudyGenAI() {
               </div>
               <div className="cs-col cs-col-media">
                 <div className="cs-image-placeholder cs-image-inline">
-                  <img src="assets/GenAI - Interoperability.gif" alt="Manual vs. AI Filter States" />
+                  <video src="assets/GenAI - Interoperability.mp4" autoPlay loop muted playsInline />
                 </div>
               </div>
             </div>
@@ -283,7 +283,7 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col cs-col-media">
                 <div className="cs-image-placeholder cs-image-inline">
-                  <img src="assets/GenAI - Showing results.gif" alt="Results — Map, Tokens & Error States" />
+                  <video src="assets/GenAI - Showing results.mp4" autoPlay loop muted playsInline />
                 </div>
               </div>
               <div className="cs-col">
@@ -319,7 +319,7 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col cs-col-media">
                 <div className="cs-image-placeholder cs-image-inline">
-                  <img src="assets/GenAI - Actions.gif" alt="Actions & Feedback UI" />
+                  <video src="assets/GenAI - Actions.mp4" autoPlay loop muted playsInline />
                 </div>
               </div>
               <div className="cs-col">
