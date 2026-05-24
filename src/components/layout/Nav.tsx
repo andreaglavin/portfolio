@@ -1,86 +1,86 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { mobileMenuLinks, navLinks, sectionIds, site } from '@/data/site';
+import { HomeIcon } from '@/components/icons/HomeIcon';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { useScrolled } from '@/hooks/useScrolled';
-import { HomeIcon } from '@/components/icons/HomeIcon';
-
-import styles from './Nav.module.css';
 
 type NavProps = {
-  /** When true, the nav stays in its scrolled (translucent) state. Used on case study pages. */
+  /** Keep nav in scrolled state (case-study pages). */
   alwaysScrolled?: boolean;
-  /** Hide the section anchor links — e.g. on case-study pages where they're meaningless. */
-  hideAnchors?: boolean;
+  /** Use the minimal nav (case-study pages — only Let's Talk). */
+  minimal?: boolean;
 };
 
-export function Nav({ alwaysScrolled = false, hideAnchors = false }: NavProps) {
+export function Nav({ alwaysScrolled = false, minimal = false }: NavProps) {
   const scrolled = useScrolled(50);
-  const active = useActiveSection(sectionIds);
+  const active = useActiveSection(['ai-native', 'work', 'testimonials', 'timeline']);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isScrolled = alwaysScrolled || scrolled;
 
+  // Body scroll lock when mobile menu open
+  useEffect(() => {
+    if (menuOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   return (
     <>
-      <nav className={[styles.nav, isScrolled && styles.scrolled].filter(Boolean).join(' ')}>
-        <div className={styles.inner}>
-          <Link to="/" className={styles.logo} aria-label={`${site.name} home`}>
+      <nav className={`nav${isScrolled ? ' scrolled' : ''}`} id="nav">
+        <div className="nav-inner">
+          <Link to="/" className="nav-logo" aria-label="Home">
             <HomeIcon />
           </Link>
 
-          {!hideAnchors && (
-            <div className={styles.links}>
-              {navLinks.map((link) => {
-                const id = link.href.slice(1);
-                const isActive = active === id;
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className={[styles.link, isActive && styles.linkActive].filter(Boolean).join(' ')}
-                  >
-                    {link.label}
-                  </a>
-                );
-              })}
-              <a href={`mailto:${site.email}`} className={styles.cta}>
+          {minimal ? (
+            <div className="nav-links">
+              <a href="mailto:andreaglavin@gmail.com" className="nav-cta">
                 Let's Talk
               </a>
             </div>
-          )}
-
-          {hideAnchors && (
-            <div className={styles.links}>
-              <a href={`mailto:${site.email}`} className={styles.cta}>
+          ) : (
+            <div className="nav-links">
+              <a href="#ai-native" className={active === 'ai-native' ? 'nav-active' : ''}>
+                AI-Native
+              </a>
+              <a href="#work" className={active === 'work' ? 'nav-active' : ''}>
+                Work
+              </a>
+              <a href="#testimonials" className={active === 'testimonials' ? 'nav-active' : ''}>
+                Testimonials
+              </a>
+              <a href="#timeline" className={active === 'timeline' ? 'nav-active' : ''}>
+                Experience
+              </a>
+              <a href="mailto:andreaglavin@gmail.com" className="nav-cta">
                 Let's Talk
               </a>
             </div>
           )}
 
           <button
-            type="button"
-            className={styles.mobileToggle}
+            className="nav-mobile-toggle"
+            id="navToggle"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((open) => !open)}
+            onClick={() => setMenuOpen((o) => !o)}
           >
-            <span />
-            <span />
+            <span></span>
+            <span></span>
           </button>
         </div>
       </nav>
 
-      {menuOpen && !hideAnchors && (
-        <div className={styles.mobileMenu}>
-          {mobileMenuLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
-              {link.label}
-            </a>
-          ))}
-        </div>
-      )}
+      <div className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu">
+        <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
+        <a href="#ai-native" onClick={() => setMenuOpen(false)}>AI-Native</a>
+        <a href="#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>Let's Talk</a>
+      </div>
     </>
   );
 }

@@ -2,7 +2,8 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import './design-system/index.css';
+import './styles.css';
+import './case-study.css';
 import { Home } from './pages/Home';
 import { CaseStudyGenAI } from './pages/CaseStudyGenAI';
 import { CaseStudyAnalytics } from './pages/CaseStudyAnalytics';
@@ -16,9 +17,9 @@ createRoot(root).render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/case-study/genai-filtering" element={<CaseStudyGenAI />} />
-        <Route path="/case-study/analytics-suite" element={<CaseStudyAnalytics />} />
-        <Route path="/case-study/roaming-insights" element={<CaseStudyRoaming />} />
+        <Route path="/case-study-1" element={<CaseStudyGenAI />} />
+        <Route path="/case-study-2" element={<CaseStudyAnalytics />} />
+        <Route path="/case-study-3" element={<CaseStudyRoaming />} />
       </Routes>
     </HashRouter>
   </StrictMode>,

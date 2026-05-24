@@ -1,30 +1,52 @@
-import { Container } from '@/components/ui/Container';
-import { FadeIn } from '@/components/ui/FadeIn';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { timeline } from '@/data/timeline';
-
-import styles from './Timeline.module.css';
-
 export function Timeline() {
   return (
-    <section className={styles.section} id="timeline">
-      <Container>
-        <SectionHeader label="Career Path" title="Experience" />
-
-        <div className={styles.wrapper}>
-          <div className={styles.line} aria-hidden="true" />
-          {timeline.map((entry, i) => (
-            <FadeIn key={entry.company + entry.date} className={styles.item} as="div">
-              <div className={[styles.dot, i === 0 && styles.dotActive].filter(Boolean).join(' ')} aria-hidden="true" />
-              <div className={styles.card}>
-                <span className={styles.date}>{entry.date}</span>
-                <h3 className={styles.role}>{entry.role}</h3>
-                <span className={styles.company}>{entry.company}</span>
-              </div>
-            </FadeIn>
-          ))}
+    <section className="timeline" id="timeline">
+      <div className="section-container">
+        <div className="section-header">
+          <p className="section-label">Career Path</p>
+          <h2 className="section-title">Experience</h2>
         </div>
-      </Container>
+
+        <div className="timeline-wrapper">
+          <div className="timeline-line"></div>
+
+          <div className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-card">
+              <span className="timeline-date">2020 — Present</span>
+              <h3 className="timeline-role">Senior Product Designer</h3>
+              <span className="timeline-company">Meta</span>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-card">
+              <span className="timeline-date">2018 — 2020</span>
+              <h3 className="timeline-role">Director of UX and Product Design</h3>
+              <span className="timeline-company">Yalo</span>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-card">
+              <span className="timeline-date">2017 — 2018</span>
+              <h3 className="timeline-role">Product Design Manager</h3>
+              <span className="timeline-company">Pulpomatic</span>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-card">
+              <span className="timeline-date">2015 — 2017</span>
+              <h3 className="timeline-role">Design Consultant</h3>
+              <span className="timeline-company">Multiplica, The Cocktail</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

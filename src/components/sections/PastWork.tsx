@@ -1,38 +1,48 @@
-import { Container } from '@/components/ui/Container';
-import { FadeIn } from '@/components/ui/FadeIn';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { TagList } from '@/components/ui/TagList';
-import { pastWork } from '@/data/work';
-
-import styles from './PastWork.module.css';
-
 export function PastWork() {
   return (
-    <section className={styles.section} id="past-work">
-      <Container>
-        <SectionHeader
-          label="Earlier Projects"
-          title="Past Work"
-          subtitle="Selected projects from earlier in my career that shaped my design philosophy."
-        />
-
-        <div className={styles.grid}>
-          {pastWork.map((project) => (
-            <FadeIn key={project.id} className={styles.card} as="article">
-              <div className={[styles.imageWrap, project.variant === 'tall' && styles.imageWrapTall].filter(Boolean).join(' ')}>
-                <div className={[styles.imageInner, project.variant === 'tall' && styles.imageInnerTall].filter(Boolean).join(' ')}>
-                  <img src={project.image} alt={project.imageAlt} className={[styles.image, project.variant === 'tall' && styles.imageTall].filter(Boolean).join(' ')} />
-                </div>
-              </div>
-              <div className={styles.content}>
-                <TagList tags={project.tags} />
-                <h3 className={styles.title}>{project.title}</h3>
-                <p className={styles.description}>{project.description}</p>
-              </div>
-            </FadeIn>
-          ))}
+    <section className="past-work" id="past-work">
+      <div className="section-container">
+        <div className="section-header">
+          <p className="section-label">Earlier Projects</p>
+          <h2 className="section-title">Past Work</h2>
+          <p className="section-subtitle">Selected projects from earlier in my career that shaped my design philosophy.</p>
         </div>
-      </Container>
+
+        <div className="past-work-grid">
+          <div className="past-work-card">
+            <div className="past-work-image">
+              <div className="past-work-gif-wrapper">
+                <img src="assets/Gif Xcaret.gif" alt="Xcaret Chatbot" className="past-work-gif-img" />
+              </div>
+            </div>
+            <div className="past-work-content">
+              <div className="work-card-tags">
+                <span className="tag">Conversational UX</span>
+                <span className="tag">AI Assistant</span>
+                <span className="tag">Messenger</span>
+              </div>
+              <h3>Conversational UX for Assisted Sales</h3>
+              <p>Designed an AI-assisted sales experience within Messenger for Xcaret Group. User research revealed <strong className="gradient-text">~70% of users</strong> had purchase intent but were dropping off. Proposed a semi-automated purchase flow that opened a new acquisition channel, prevented churn, and led to payment gateway integration.</p>
+            </div>
+          </div>
+          <div className="past-work-card">
+            <div className="past-work-image">
+              <div className="past-work-gif-wrapper">
+                <img src="assets/EPDH2.PNG" alt="E-Commerce Checkout Optimization" className="past-work-gif-img" />
+              </div>
+            </div>
+            <div className="past-work-content">
+              <div className="work-card-tags">
+                <span className="tag">E-Commerce</span>
+                <span className="tag">UX Design</span>
+                <span className="tag">Conversion</span>
+              </div>
+              <h3>E-Commerce Checkout Optimization</h3>
+              <p>Streamlined the online store's checkout experience using e-commerce best practices and UX improvements, driving a <strong className="gradient-text">200% increase</strong> in purchase conversion rates during the initial months post-launch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
