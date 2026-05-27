@@ -1230,6 +1230,51 @@ em {
     margin-bottom: 40px;
 }
 
+.email-copy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    margin: 20px auto 0;
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.email-copy:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+    background: var(--color-accent-subtle);
+}
+
+.email-copy-address {
+    user-select: all;
+}
+
+.email-copy-icon {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent-hover);
+}
+
+.email-copy-feedback {
+    font-size: 12px;
+    color: var(--color-accent-hover);
+    min-width: 50px;
+    text-align: left;
+}
+
+.email-copy-feedback:empty {
+    display: none;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
