@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from './CaseStudyLayout';
+import { backToWorkSection } from './backToWorkSection';
 
 export function CaseStudyGenAI() {
   return (
@@ -7,7 +8,7 @@ export function CaseStudyGenAI() {
       {/* ========== HERO ========== */}
       <header className="cs-hero">
         <div className="section-container">
-          <a href="#/" className="back-link">← Back to Work</a>
+          <a href="#/" className="back-link" onClick={backToWorkSection}>← Back to Work</a>
           <div className="case-study-tags">
             <span className="tag">GenAI</span>
             <span className="tag">Enterprise B2B</span>
@@ -482,7 +483,7 @@ export function CaseStudyGenAI() {
       <div className="cs-bottom-nav">
         <div className="section-container">
           <div className="cs-bottom-nav-inner">
-            <a href="#/" className="btn btn-secondary">← Back to Work</a>
+            <a href="#/" className="btn btn-secondary" onClick={backToWorkSection}>← Back to Work</a>
           </div>
         </div>
       </div>

@@ -51,6 +51,9 @@ export function Work() {
               <div className="work-card-img-wrapper">
                 <img src="assets/Opportunities.png" alt="Analytics Suite — Decision-Support Engine" className="work-card-img" />
               </div>
+              <div className="work-card-overlay">
+                <a href="#/case-study-2" className="btn btn-primary">See the Case Study →</a>
+              </div>
             </div>
             <div className="work-card-content">
               <div className="work-card-tags">
@@ -74,6 +77,7 @@ export function Work() {
                   <span className="work-stat-label">of Team's Roadmap</span>
                 </div>
               </div>
+              <a href="#/case-study-2" className="work-card-cta">See the Case Study →</a>
             </div>
           </div>
 
