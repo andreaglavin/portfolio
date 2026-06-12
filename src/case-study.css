@@ -1779,6 +1779,15 @@
     grid-template-columns: 3fr 2fr;
 }
 
+/* GenAI Key Design Decisions: 60% image, 40% text — flips when image is on the left */
+.cs-decision .cs-two-col-media {
+    grid-template-columns: 2fr 3fr;
+}
+
+.cs-decision .cs-two-col-media:has(> .cs-col-media:first-child) {
+    grid-template-columns: 3fr 2fr;
+}
+
 /* Feature media: unify corner radius on real images and placeholders */
 .cs-feature .cs-col-media > * {
     border-radius: var(--radius-xl);
