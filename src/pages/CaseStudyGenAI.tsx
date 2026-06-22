@@ -310,11 +310,14 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
                 <span className="cs-decision-num">05</span>
-                <h3>Derived Metrics</h3>
+                <h3>Results summary</h3>
                 <p>A new capability enabled exclusively by GenAI. Custom formulas require a unique display in the panel, with tokens highlighting how the metric was calculated and which filters were applied. Additional insights are shown via tooltips on hover.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <img src="assets/Derived metrics 1.png" alt="Derived Metrics — Tokens & Tooltips" className="cs-inline-img cs-img-constrained" />
+                <div className="cs-image-pair">
+                  <img src="assets/7b.jpg" alt="Derived Metrics — full panel view" />
+                  <img src="assets/Derived metrics 1.png" alt="Derived Metrics — Tokens & Tooltips" />
+                </div>
               </div>
             </div>
           </div>
@@ -363,7 +366,7 @@ export function CaseStudyGenAI() {
             <div className="cs-research-card cs-research-insight">
               <div className="cs-insight-icon">!</div>
               <h4>Trust Through Transparency</h4>
-              <p>Partners expected to see how the AI interpreted their question before trusting the results.</p>
+              <p>Partners expected to see exactly how the AI interpreted their question before trusting the results.</p>
             </div>
             <div className="cs-research-card cs-research-insight">
               <div className="cs-insight-icon">!</div>

@@ -1850,13 +1850,13 @@
     grid-template-columns: 3fr 2fr;
 }
 
-/* GenAI Key Design Decisions: text 21.4% / image 78.6% — flips when image is on the left */
+/* GenAI Key Design Decisions: text 28.5% / image 71.5% — flips when image is on the left */
 .cs-decision .cs-two-col-media {
-    grid-template-columns: 3fr 11fr;
+    grid-template-columns: 2fr 5fr;
 }
 
 .cs-decision .cs-two-col-media:has(> .cs-col-media:first-child) {
-    grid-template-columns: 11fr 3fr;
+    grid-template-columns: 5fr 2fr;
 }
 
 /* Feature media: unify corner radius on real images and placeholders */
@@ -1878,13 +1878,16 @@
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .cs-image-pair > img {
-    flex: 1 1 0;
+    flex: 0 1 auto;
     min-width: 0;
-    width: 100%;
+    width: auto;
+    max-width: calc(50% - 8px);
     height: auto;
+    max-height: 520px;
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-border);
     display: block;
