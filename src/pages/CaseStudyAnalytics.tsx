@@ -1,7 +1,18 @@
+import { useRef, useState } from 'react';
 import { CaseStudyLayout } from './CaseStudyLayout';
 import { backToWorkSection } from './backToWorkSection';
 
 export function CaseStudyAnalytics() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) v.play();
+    else v.pause();
+  };
+
   return (
     <CaseStudyLayout title="Case Study — From Reporting to Action | Ricardo">
 
@@ -312,7 +323,7 @@ export function CaseStudyAnalytics() {
       </section>
 
       {/* ========== PHASE 1 FEATURES ========== */}
-      <section className="cs-bg-base">
+      <section className="cs-bg-base cs-phase1-features">
         <div className="section-container">
 
           {/* Feature: Initial explorations */}
@@ -358,10 +369,7 @@ export function CaseStudyAnalytics() {
                 </ul>
               </div>
               <div className="cs-col cs-col-media">
-                <div className="cs-image-pair">
-                  <img src="assets/Oppo4.1.png" alt="Opportunities widget — New and Changed indicators" />
-                  <img src="assets/Oppo4.2.png" alt="Opportunities widget — actions menu (Save, Share, Hide)" />
-                </div>
+                <img src="assets/Prototype - opportunities 1.gif" alt="Opportunities widget prototype — new/changed indicators and actions menu" className="cs-inline-img cs-img-constrained" style={{ maxHeight: '572px' }} />
               </div>
             </div>
           </div>
@@ -452,8 +460,27 @@ export function CaseStudyAnalytics() {
               </ul>
             </div>
             <div className="cs-col cs-col-media">
-              <img src="assets/Oppo9.png" alt="Criteria Engine interface — presets and custom builder" className="cs-inline-img" />
+              <img src="assets/Oppo9.png" alt="Criteria Engine — Convergence preset showing a multi-row builder" className="cs-inline-img" />
             </div>
+          </div>
+
+          <div className="cs-img-grid-2">
+            <figure className="cs-img-figure">
+              <img src="assets/criteriaengine 7.png" alt="Criteria Engine — metric picker with Mobile and Broadband tabs" className="cs-inline-img" />
+              <figcaption className="cs-img-caption">Choosing a metric across product categories</figcaption>
+            </figure>
+            <figure className="cs-img-figure">
+              <img src="assets/criteriaengine 4.png" alt="Criteria Engine — custom builder with metric format options" className="cs-inline-img" />
+              <figcaption className="cs-img-caption">Metric format and performance options</figcaption>
+            </figure>
+            <figure className="cs-img-figure">
+              <img src="assets/criteriaengine 5.png" alt="Criteria Engine — network and competitor comparison options" className="cs-inline-img" />
+              <figcaption className="cs-img-caption">Network and competitor comparisons</figcaption>
+            </figure>
+            <figure className="cs-img-figure">
+              <img src="assets/criteriaengine 6.png" alt="Criteria Engine — range values for 'is between' comparison" className="cs-inline-img" />
+              <figcaption className="cs-img-caption">Range values with “is between”</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -490,7 +517,36 @@ export function CaseStudyAnalytics() {
             <h2>End-to-end Opportunities flow</h2>
             <p>Figma Make prototype of the Criteria Engine on the Opportunities page.</p>
           </div>
-          <img src="assets/Oppo10.png" alt="Figma Make prototype — Opportunities page with map and Criteria Engine panel" className="cs-hero-img" />
+          <div className="cs-video-wrap">
+            <video
+              ref={videoRef}
+              src="assets/CriteriaEngine-prototype-video.mp4"
+              className="cs-hero-img"
+              loop
+              muted
+              playsInline
+              onClick={togglePlay}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+            />
+            <button
+              type="button"
+              className={`cs-video-playbtn${isPlaying ? ' is-playing' : ''}`}
+              onClick={togglePlay}
+              aria-label={isPlaying ? 'Pause video' : 'Play video'}
+            >
+              {isPlaying ? (
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <rect x="6" y="5" width="4" height="14" rx="1" />
+                  <rect x="14" y="5" width="4" height="14" rx="1" />
+                </svg>
+              ) : (
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5.5v13a1 1 0 0 0 1.55.83l10-6.5a1 1 0 0 0 0-1.66l-10-6.5A1 1 0 0 0 8 5.5z" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </section>
 

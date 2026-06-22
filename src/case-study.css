@@ -239,12 +239,83 @@
     margin: 48px 0;
 }
 
+/* Video player with custom play/pause overlay */
+.cs-video-wrap {
+    position: relative;
+    margin: 48px 0;
+    cursor: pointer;
+}
+.cs-video-wrap .cs-hero-img {
+    margin: 0;
+}
+.cs-video-playbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 0 var(--color-accent-glow);
+    transition: opacity 0.2s ease, background 0.2s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+.cs-video-playbtn:hover {
+    background: var(--color-accent-hover);
+    box-shadow: 0 0 40px 6px var(--color-accent-glow);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+.cs-video-playbtn.is-playing {
+    opacity: 0;
+    pointer-events: none;
+}
+.cs-video-wrap:hover .cs-video-playbtn.is-playing {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .cs-inline-img {
     width: 100%;
     height: auto;
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
     display: block;
+}
+
+/* Image with caption */
+.cs-img-figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cs-img-caption {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-tertiary);
+    text-align: center;
+    margin: 0;
+}
+
+/* 2-column image grid for showing related screen variations */
+.cs-img-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+}
+@media (max-width: 768px) {
+    .cs-img-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 48px;
+    }
 }
 
 /* For tall images: cap the display height but keep aspect ratio (no cropping). */
@@ -1779,18 +1850,27 @@
     grid-template-columns: 3fr 2fr;
 }
 
-/* GenAI Key Design Decisions: 60% image, 40% text — flips when image is on the left */
+/* GenAI Key Design Decisions: text 21.4% / image 78.6% — flips when image is on the left */
 .cs-decision .cs-two-col-media {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 11fr;
 }
 
 .cs-decision .cs-two-col-media:has(> .cs-col-media:first-child) {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 11fr 3fr;
 }
 
 /* Feature media: unify corner radius on real images and placeholders */
 .cs-feature .cs-col-media > * {
     border-radius: var(--radius-xl);
+}
+
+/* Phase 1 features — ~10% larger images vs the default 65/35 cs-feature split.
+   New ratio: text 28.5% / image 71.5% (≈ 2fr 5fr) */
+.cs-phase1-features .cs-feature .cs-two-col-media {
+    grid-template-columns: 2fr 5fr;
+}
+.cs-phase1-features .cs-feature .cs-two-col-media:has(> .cs-col-media:first-child) {
+    grid-template-columns: 5fr 2fr;
 }
 
 /* Side-by-side image pair within a feature row */
