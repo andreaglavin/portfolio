@@ -1,8 +1,8 @@
 import {
+  ChatGPTIcon,
   ClaudeIcon,
   CursorIcon,
   FigmaIcon,
-  GeminiIcon,
   ManusIcon,
   VsCodeIcon,
 } from '@/components/icons/ToolIcons';
@@ -58,11 +58,11 @@ export function AINative() {
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><ClaudeIcon /></div>
-              <span className="ai-tool-name">Claude Code</span>
+              <span className="ai-tool-name">Claude</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
-              <div className="ai-tool-icon"><GeminiIcon /></div>
-              <span className="ai-tool-name">Gemini</span>
+              <div className="ai-tool-icon"><ChatGPTIcon /></div>
+              <span className="ai-tool-name">ChatGPT</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><CursorIcon /></div>

@@ -452,11 +452,11 @@ export function CaseStudyAnalytics() {
               <p>Designed a system that expanded across the complete suite, enabling thousands of new data combinations — a complex cross-product system with varying data requirements and differences across products.</p>
               <p>Allows complex customizations and thousands of unique data combinations:</p>
               <ul className="cs-list">
-                <li>Boolean & arithmetic operations</li>
-                <li>All metrics and metric cuts</li>
-                <li>Metric performance options</li>
-                <li>Competitor comparisons</li>
-                <li>Ranges, percentages, absolute values</li>
+                <li><strong>Boolean & arithmetic operations</strong></li>
+                <li><strong>All metrics and metric cuts</strong></li>
+                <li><strong>Metric performance options</strong></li>
+                <li><strong>Competitor comparisons</strong></li>
+                <li><strong>Ranges, percentages, absolute values</strong></li>
               </ul>
             </div>
             <div className="cs-col cs-col-media">
