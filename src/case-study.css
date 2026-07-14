@@ -327,6 +327,13 @@
     margin-right: auto;
 }
 
+/* Match the section 05 image width; height follows each clip's aspect ratio */
+video.cs-img-lg {
+    width: var(--cs-media-w);
+    max-width: var(--cs-media-w);
+    max-height: none;
+}
+
 /* Before/After comparison grid */
 .cs-before-after {
     display: grid;
@@ -626,7 +633,7 @@
 }
 
 .cs-decision {
-    padding: 48px 0;
+    padding: 72px 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -1852,11 +1859,20 @@
 
 /* GenAI Key Design Decisions: text 28.5% / image 71.5% — flips when image is on the left */
 .cs-decision .cs-two-col-media {
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 2.2fr 4.8fr;
 }
 
 .cs-decision .cs-two-col-media:has(> .cs-col-media:first-child) {
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 4.8fr 2.2fr;
+}
+
+/* Alternate media/text sides down the decisions list — 2nd, 4th, 6th rows flip
+   (text stays 2.2fr, media 4.8fr; only the sides swap) */
+.cs-decision:nth-of-type(odd) .cs-two-col-media {
+    direction: rtl;
+}
+.cs-decision:nth-of-type(odd) .cs-two-col-media > * {
+    direction: ltr;
 }
 
 /* Feature media: unify corner radius on real images and placeholders */
@@ -1873,6 +1889,9 @@
     grid-template-columns: 5fr 2fr;
 }
 
+/* Shared width for the phone mockups in decisions 02, 05, 06 — equal width, height follows aspect */
+:root { --cs-media-w: 236px; }
+
 /* Side-by-side image pair within a feature row */
 .cs-image-pair {
     display: flex;
@@ -1882,12 +1901,11 @@
 }
 
 .cs-image-pair > img {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     min-width: 0;
-    width: auto;
-    max-width: calc(50% - 8px);
+    width: var(--cs-media-w);
+    max-width: var(--cs-media-w);
     height: auto;
-    max-height: 520px;
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-border);
     display: block;

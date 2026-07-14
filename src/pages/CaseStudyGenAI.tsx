@@ -193,45 +193,44 @@ export function CaseStudyGenAI() {
         </div>
       </section>
 
-      {/* ========== PRODUCT POSITIONING (callout + list) ========== */}
-      <section className="cs-section cs-bg-accent-subtle">
+      {/* ========== RESEARCH ========== */}
+      <section className="cs-section cs-bg-alt">
         <div className="section-container">
-          <div className="cs-two-col cs-two-col-wide">
-            <div className="cs-col">
-              <span className="cs-section-label">Strategy</span>
-              <h2>Product Positioning</h2>
-              <p>Rather than embedding GenAI as "just another filter," we created a distinct panel with its own entry point. This was a deliberate strategic choice.</p>
+          <div className="cs-section-header-centered">
+            <span className="cs-section-label">Validation</span>
+            <h2>Research & Discovery</h2>
+            <p>We conducted early testing with 3 pilot partners using an initial prototype, which I helped build through vibe coding. We also leveraged AI to run critiques.</p>
+          </div>
+          <div className="cs-research-grid">
+            <div className="cs-research-card cs-research-methods">
+              <h4>Methods</h4>
+              <ul className="cs-list cs-list-compact">
+                <li>Partner interviews</li>
+                <li>Dogfooding sessions (testing with real data)</li>
+                <li>Prompt evaluation audits (scoring for response quality)</li>
+                <li>AI critique</li>
+              </ul>
             </div>
-            <div className="cs-col">
-              <div className="cs-positioning-list">
-                <div className="cs-positioning-item">
-                  <span className="cs-positioning-icon">→</span>
-                  <div>
-                    <strong>Avoids narrowing the mental model</strong>
-                    <p>GenAI can do more than filter — derived metrics, comparisons, follow-ups</p>
-                  </div>
-                </div>
-                <div className="cs-positioning-item">
-                  <span className="cs-positioning-icon">→</span>
-                  <div>
-                    <strong>Creates room for capability expansion</strong>
-                    <p>The panel can evolve into a full "Insights Assistant"</p>
-                  </div>
-                </div>
-                <div className="cs-positioning-item">
-                  <span className="cs-positioning-icon">→</span>
-                  <div>
-                    <strong>Sets clear expectations</strong>
-                    <p>Users know when they're interacting with AI vs. manual controls</p>
-                  </div>
-                </div>
-              </div>
+            <div className="cs-research-card cs-research-insight">
+              <div className="cs-insight-icon">!</div>
+              <h4>Mental Model Mismatch</h4>
+              <p>Users struggled to understand AI capabilities and limitations, as results varied based on partner-specific data availability.</p>
+            </div>
+            <div className="cs-research-card cs-research-insight">
+              <div className="cs-insight-icon">!</div>
+              <h4>Trust Through Transparency</h4>
+              <p>Partners expected to see exactly how the AI interpreted their question before trusting the results.</p>
+            </div>
+            <div className="cs-research-card cs-research-insight">
+              <div className="cs-insight-icon">!</div>
+              <h4>Integration Over Isolation</h4>
+              <p>GenAI results were expected to integrate seamlessly with existing tools (download, share, link to dashboards).</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ========== KEY DESIGN DECISIONS (all same direction — text left, media right) ========== */}
+      {/* ========== KEY DESIGN DECISIONS (alternating — text/media sides swap each row) ========== */}
       <section className="cs-section cs-bg-base cs-decisions-section">
         <div className="section-container">
           <div className="cs-section-header-centered">
@@ -266,7 +265,7 @@ export function CaseStudyGenAI() {
                 <p>Once a user prompts the AI, a rotating carousel shows the processing steps — giving users feedback on what's happening during loading. Once results arrive, steps collapse into "reasoning," allowing users to verify that the AI searched through the right things.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <video src="assets/GenAI - Carrousel.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
+                <video src="assets/GenAI - Carrousel.mp4" className="cs-inline-img cs-img-constrained cs-img-lg" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -278,11 +277,11 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
                 <span className="cs-decision-num">03</span>
-                <h3>Interoperability with Manual Filters</h3>
-                <p>The AI's functionality exceeds manual filters. Only one panel is open at a time. The map indicates when AI filters are in use vs. manual. Warning messages ensure users understand that manual filters will override AI results.</p>
+                <h3>Showing Results</h3>
+                <p>The map automatically renders with AI-applied filters. The AI panel displays a summary and specific filter tokens, showing exactly which parameters were applied. If the AI can't produce results, we surface the reason clearly.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <video src="assets/GenAI - Interoperability.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
+                <video src="assets/GenAI - Showing results.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -294,11 +293,20 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
                 <span className="cs-decision-num">04</span>
-                <h3>Showing Results</h3>
-                <p>The map automatically renders with AI-applied filters. The AI panel displays a summary and specific filter tokens, showing exactly which parameters were applied. If the AI can't produce results, we surface the reason clearly.</p>
+                <h3>Displaying Any Metric</h3>
+                <p>A flexible pattern for both product and derived/custom metrics—a new capability unlocked by AI. It keeps the formula behind each result transparent, with extra detail revealed on hover to avoid overwhelming users.</p>
+                <p>Current three-tier visual hierarchy:</p>
+                <ul className="cs-list cs-list-compact">
+                  <li><strong>Operands</strong> — the data.</li>
+                  <li><strong>Operators</strong> (e.g., -, &lt;) — the connectors (slightly darker).</li>
+                  <li><strong>Values</strong> (e.g., 10) — the editable elements (blue background).</li>
+                </ul>
               </div>
               <div className="cs-col cs-col-media">
-                <video src="assets/GenAI - Showing results.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
+                <div className="cs-image-pair">
+                  <img src="assets/ai-query-download-speed.png" alt="Explore Maps with AI — download speed filter" />
+                  <img src="assets/ai-query-conversation.png" alt="Explore Maps with AI — custom derived metric" />
+                </div>
               </div>
             </div>
           </div>
@@ -310,14 +318,11 @@ export function CaseStudyGenAI() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
                 <span className="cs-decision-num">05</span>
-                <h3>Results summary</h3>
-                <p>A new capability enabled exclusively by GenAI. Custom formulas require a unique display in the panel, with tokens highlighting how the metric was calculated and which filters were applied. Additional insights are shown via tooltips on hover.</p>
+                <h3>Interoperability with Manual Filters</h3>
+                <p>The AI's functionality exceeds manual filters. Only one panel is open at a time. The map indicates when AI filters are in use vs. manual. Warning messages ensure users understand that manual filters will override AI results.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <div className="cs-image-pair">
-                  <img src="assets/7b.jpg" alt="Derived Metrics — full panel view" />
-                  <img src="assets/Derived metrics 1.png" alt="Derived Metrics — Tokens & Tooltips" />
-                </div>
+                <video src="assets/GenAI - Interoperability.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -333,45 +338,8 @@ export function CaseStudyGenAI() {
                 <p>Contextual actions to download and share results help drive engagement. Every AI response includes thumbs up/down feedback to capture quality data, plus a modal for detailed input.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <video src="assets/GenAI - Actions.mp4" className="cs-inline-img cs-img-constrained" autoPlay loop muted playsInline />
+                <video src="assets/GenAI - Actions.mp4" className="cs-inline-img cs-img-constrained cs-img-lg" autoPlay loop muted playsInline />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== RESEARCH ========== */}
-      <section className="cs-section cs-bg-alt">
-        <div className="section-container">
-          <div className="cs-section-header-centered">
-            <span className="cs-section-label">Validation</span>
-            <h2>Research & Discovery</h2>
-            <p>We conducted early testing with 3 pilot partners using an initial prototype, which I helped build through vibe coding. We also leveraged AI to run critiques.</p>
-          </div>
-          <div className="cs-research-grid">
-            <div className="cs-research-card cs-research-methods">
-              <h4>Methods</h4>
-              <ul className="cs-list cs-list-compact">
-                <li>Partner interviews</li>
-                <li>Dogfooding sessions (testing with real data)</li>
-                <li>Prompt evaluation audits (scoring for response quality)</li>
-                <li>AI critique</li>
-              </ul>
-            </div>
-            <div className="cs-research-card cs-research-insight">
-              <div className="cs-insight-icon">!</div>
-              <h4>Mental Model Mismatch</h4>
-              <p>Users struggled to understand AI capabilities and limitations, as results varied based on partner-specific data availability.</p>
-            </div>
-            <div className="cs-research-card cs-research-insight">
-              <div className="cs-insight-icon">!</div>
-              <h4>Trust Through Transparency</h4>
-              <p>Partners expected to see exactly how the AI interpreted their question before trusting the results.</p>
-            </div>
-            <div className="cs-research-card cs-research-insight">
-              <div className="cs-insight-icon">!</div>
-              <h4>Integration Over Isolation</h4>
-              <p>GenAI results were expected to integrate seamlessly with existing tools (download, share, link to dashboards).</p>
             </div>
           </div>
         </div>
@@ -417,6 +385,44 @@ export function CaseStudyGenAI() {
                   <span>Temporal analysis</span>
                   <span>Date picker + reapply</span>
                   <span className="cs-ai-badge">One sentence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== PRODUCT POSITIONING (callout + list) ========== */}
+      <section className="cs-section cs-bg-accent-subtle">
+        <div className="section-container">
+          <div className="cs-two-col cs-two-col-wide">
+            <div className="cs-col">
+              <span className="cs-section-label">Strategy</span>
+              <h2>Product Positioning</h2>
+              <p>Rather than embedding GenAI as "just another filter," we created a distinct panel with its own entry point. This was a deliberate strategic choice.</p>
+            </div>
+            <div className="cs-col">
+              <div className="cs-positioning-list">
+                <div className="cs-positioning-item">
+                  <span className="cs-positioning-icon">→</span>
+                  <div>
+                    <strong>Avoids narrowing the mental model</strong>
+                    <p>GenAI can do more than filter — derived metrics, comparisons, follow-ups</p>
+                  </div>
+                </div>
+                <div className="cs-positioning-item">
+                  <span className="cs-positioning-icon">→</span>
+                  <div>
+                    <strong>Creates room for capability expansion</strong>
+                    <p>The panel can evolve into a full "Insights Assistant"</p>
+                  </div>
+                </div>
+                <div className="cs-positioning-item">
+                  <span className="cs-positioning-icon">→</span>
+                  <div>
+                    <strong>Sets clear expectations</strong>
+                    <p>Users know when they're interacting with AI vs. manual controls</p>
+                  </div>
                 </div>
               </div>
             </div>
