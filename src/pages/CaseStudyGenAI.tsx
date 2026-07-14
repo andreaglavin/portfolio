@@ -203,7 +203,7 @@ export function CaseStudyGenAI() {
           <div className="cs-section-header-centered">
             <span className="cs-section-label">Design Framework</span>
             <h2>Defining the Experience</h2>
-            <p>We researched and identified GenAI Meta design principles and heuristics to craft the filtering experience.</p>
+            <p>Based on the research findings, we defined three design principles and crafted an experience to support them.</p>
           </div>
           <div className="cs-principles cs-principles--row">
             <div className="cs-principle">
