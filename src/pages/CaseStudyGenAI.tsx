@@ -160,39 +160,6 @@ export function CaseStudyGenAI() {
         </div>
       </section>
 
-      {/* ========== DESIGN PRINCIPLES ========== */}
-      <section className="cs-section cs-bg-elevated">
-        <div className="section-container">
-          <div className="cs-section-header-centered">
-            <span className="cs-section-label">Design Framework</span>
-            <h2>Defining the Experience</h2>
-            <p>We researched and identified GenAI Meta design principles and heuristics to craft the filtering experience.</p>
-          </div>
-          <div className="cs-principles">
-            <div className="cs-principle">
-              <div className="cs-principle-num">01</div>
-              <h4>Set Clear Expectations</h4>
-              <p>Craft positive first impressions that provide transparency into GenAI's presence and the safeguards around it.</p>
-            </div>
-            <div className="cs-principle">
-              <div className="cs-principle-num">02</div>
-              <h4>Provide Agency & Deliver on Intent</h4>
-              <p>Ensure the balance between individual agency and reliance on AI serves the user's intent.</p>
-            </div>
-            <div className="cs-principle">
-              <div className="cs-principle-num">03</div>
-              <h4>Demonstrate the Possibilities</h4>
-              <p>Show what's possible by encouraging play, experimentation, and deeper exploration.</p>
-            </div>
-            <div className="cs-principle">
-              <div className="cs-principle-num">04</div>
-              <h4>Anticipate & Prioritize Feedback</h4>
-              <p>When things go wrong, acknowledge the issue and provide clear feedback channels.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ========== RESEARCH ========== */}
       <section className="cs-section cs-bg-alt">
         <div className="section-container">
@@ -225,6 +192,46 @@ export function CaseStudyGenAI() {
               <div className="cs-insight-icon">!</div>
               <h4>Integration Over Isolation</h4>
               <p>GenAI results were expected to integrate seamlessly with existing tools (download, share, link to dashboards).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== DESIGN PRINCIPLES ========== */}
+      <section className="cs-section cs-bg-elevated">
+        <div className="section-container">
+          <div className="cs-section-header-centered">
+            <span className="cs-section-label">Design Framework</span>
+            <h2>Defining the Experience</h2>
+            <p>We researched and identified GenAI Meta design principles and heuristics to craft the filtering experience.</p>
+          </div>
+          <div className="cs-principles cs-principles--row">
+            <div className="cs-principle">
+              <div className="cs-principle-num">01</div>
+              <h4>Trust</h4>
+              <ul className="cs-list cs-list-compact">
+                <li><strong>Make AI reasoning visible</strong> by showing how results were generated and what actions were taken.</li>
+                <li><strong>Clarify before making assumptions</strong> by asking follow-up questions when requests are ambiguous.</li>
+                <li><strong>Provide clear outcomes</strong> with concise summaries, transparent fallbacks, and actionable error messages.</li>
+              </ul>
+            </div>
+            <div className="cs-principle">
+              <div className="cs-principle-num">02</div>
+              <h4>Flexibility</h4>
+              <ul className="cs-list cs-list-compact">
+                <li><strong>Support natural conversations</strong> without limiting users to predefined workflows or commands.</li>
+                <li><strong>Handle complexity</strong> by accommodating advanced questions and unexpected edge cases.</li>
+                <li><strong>Adapt to user needs</strong> so results can evolve with different goals and contexts.</li>
+              </ul>
+            </div>
+            <div className="cs-principle">
+              <div className="cs-principle-num">03</div>
+              <h4>Control</h4>
+              <ul className="cs-list cs-list-compact">
+                <li><strong>Keep users in charge</strong> by treating AI as a collaborator, not the decision-maker.</li>
+                <li><strong>Ask instead of guessing</strong> whenever the user's intent is unclear.</li>
+                <li><strong>Enable refinement</strong> by allowing users to edit, customize, and iterate on AI-generated results.</li>
+              </ul>
             </div>
           </div>
         </div>
