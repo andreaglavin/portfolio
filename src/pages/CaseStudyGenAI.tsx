@@ -186,7 +186,7 @@ export function CaseStudyGenAI() {
             <div className="cs-research-card cs-research-insight">
               <div className="cs-insight-icon">!</div>
               <h4>Mental Model Mismatch</h4>
-              <p>Users struggled to understand AI capabilities and limitations, as results varied based on partner-specific data availability.</p>
+              <p>Users struggled to understand AI capabilities and limitations, as results varied based on partner-specific data availability and user permissions.</p>
             </div>
             <div className="cs-research-card cs-research-insight">
               <div className="cs-insight-icon">!</div>
@@ -195,8 +195,8 @@ export function CaseStudyGenAI() {
             </div>
             <div className="cs-research-card cs-research-insight">
               <div className="cs-insight-icon">!</div>
-              <h4>Integration Over Isolation</h4>
-              <p>GenAI results were expected to integrate seamlessly with existing tools (download, share, link to dashboards).</p>
+              <h4>Complex Requests</h4>
+              <p>Users submitted prompts that exceeded the product's capabilities, resulting in confusion and negative feedback.</p>
             </div>
           </div>
         </div>
@@ -317,7 +317,12 @@ export function CaseStudyGenAI() {
               <div className="cs-col cs-col-media">
                 <div className="cs-image-pair">
                   <img src="assets/ai-query-download-speed.png" alt="Explore Maps with AI — download speed filter" />
-                  <img src="assets/ai-query-conversation.png" alt="Explore Maps with AI — custom derived metric" />
+                  <div className="cs-image-tooltip-trigger">
+                    <img src="assets/ai-query-conversation.png" alt="Explore Maps with AI — custom derived metric" />
+                    <div className="cs-image-tooltip">
+                      <img src="assets/22.png" alt="Filter token details" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

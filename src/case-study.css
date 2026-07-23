@@ -1936,6 +1936,50 @@ video.cs-img-lg {
     display: block;
 }
 
+.cs-image-tooltip-trigger {
+    position: relative;
+    flex: 0 0 auto;
+    width: var(--cs-media-w);
+}
+
+.cs-image-tooltip-trigger > img:first-child {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    display: block;
+}
+
+.cs-image-tooltip {
+    position: absolute;
+    z-index: 1;
+    top: 53%;
+    left: 100%;
+    width: 140px;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%) translateX(-4px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.cs-image-tooltip img {
+    display: block;
+    width: 152px;
+    max-width: none;
+    height: auto;
+}
+
+.cs-image-tooltip-trigger:hover .cs-image-tooltip,
+.cs-image-tooltip-trigger:focus-within .cs-image-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
 /* Cascade of three overlapping images — each one larger, readable, and layered */
 .cs-image-cascade {
     position: relative;
