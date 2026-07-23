@@ -63,7 +63,7 @@ export function CaseStudyGenAI() {
             <div className="cs-col">
               <span className="cs-section-label">Problem Space</span>
               <h2>The Challenge</h2>
-              <p>The existing cascading dropdown filters made it difficult for users to filter and retrieve specific data combinations, hindering product adoption.</p>
+              <p>The existing cascading dropdown filters made it difficult for users to filter and retrieve specific data combinations, hindering product adoption and limiting business value.</p>
               <ul className="cs-list">
                 <li><strong>Expertise Required:</strong> Users needed deep knowledge to compose valid filter combinations across hundreds of metrics.</li>
                 <li><strong>Siloed Data:</strong> Impossible to create cross-domain filters (Network + Market) or comparative queries.</li>
@@ -136,7 +136,7 @@ export function CaseStudyGenAI() {
             <div className="cs-col">
               <span className="cs-section-label">The Solution</span>
               <h2>GenAI Filtering Panel</h2>
-              <p>We built a GenAI filtering panel powered by <strong>Llama 3.3</strong> that allowed users to filter the map using natural language.</p>
+              <p>We built an MVP of a GenAI-powered filtering panel using Llama 3.3, allowing users to filter the map using natural language, and tested it with 3 pilot partners.</p>
             </div>
             <div className="cs-col">
               <div className="cs-positioning-list">
@@ -156,6 +156,11 @@ export function CaseStudyGenAI() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="cs-solution-image-grid">
+            <img src="assets/1b.jpg" alt="GenAI filtering panel interface" className="cs-inline-img" />
+            <img src="assets/11.png" alt="GenAI filtering panel interaction" className="cs-inline-img" />
+            <img src="assets/7b.jpg" alt="GenAI filtering panel results" className="cs-inline-img" />
           </div>
         </div>
       </section>

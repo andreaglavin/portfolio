@@ -288,6 +288,14 @@
     display: block;
 }
 
+.cs-solution-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, var(--cs-media-w));
+    gap: 64px;
+    width: fit-content;
+    margin: 96px auto 0;
+}
+
 /* Image with caption */
 .cs-img-figure {
     margin: 0;
@@ -2091,6 +2099,11 @@ video.cs-img-lg {
 
     .cs-research-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cs-solution-image-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
     }
 
     .cs-results-hero {
