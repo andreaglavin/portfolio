@@ -14,7 +14,7 @@ export function CaseStudyAnalytics() {
   };
 
   return (
-    <CaseStudyLayout title="Case Study — From Reporting to Action | Ricardo">
+    <CaseStudyLayout title="Case Study — From Reporting to Action">
 
       {/* ========== HERO ========== */}
       <header className="cs-hero">

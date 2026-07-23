@@ -2,7 +2,7 @@ import { CaseStudyLayout } from './CaseStudyLayout';
 
 export function CaseStudyRoaming() {
   return (
-    <CaseStudyLayout title="Case Study — Accessible Onboarding | Ricardo">
+    <CaseStudyLayout title="Case Study — Accessible Onboarding">
       <header className="case-study-hero">
         <div className="section-container">
           <a href="#/" className="back-link">← Back to Work</a>

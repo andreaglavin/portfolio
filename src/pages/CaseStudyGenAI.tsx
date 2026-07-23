@@ -3,7 +3,7 @@ import { backToWorkSection } from './backToWorkSection';
 
 export function CaseStudyGenAI() {
   return (
-    <CaseStudyLayout title="Case Study — GenAI for Filtering | Ricardo">
+    <CaseStudyLayout title="Case Study — GenAI for Filtering">
 
       {/* ========== HERO ========== */}
       <header className="cs-hero">
