@@ -28,11 +28,15 @@ export function Nav({ alwaysScrolled = false, minimal = false }: NavProps) {
     };
   }, [menuOpen]);
 
+  const scrollHomeToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <>
       <nav className={`nav${isScrolled ? ' scrolled' : ''}`} id="nav">
         <div className="nav-inner">
-          <Link to="/" className="nav-logo" aria-label="Home">
+          <Link to="/" className="nav-logo" aria-label="Home" onClick={scrollHomeToTop}>
             <HomeIcon />
           </Link>
 

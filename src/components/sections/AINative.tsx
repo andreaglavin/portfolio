@@ -1,9 +1,9 @@
 import {
   ChatGPTIcon,
   ClaudeIcon,
+  CodexIcon,
   CursorIcon,
   FigmaIcon,
-  ManusIcon,
   VsCodeIcon,
 } from '@/components/icons/ToolIcons';
 
@@ -57,20 +57,20 @@ export function AINative() {
               <span className="ai-tool-name">Figma Make</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
-              <div className="ai-tool-icon"><ClaudeIcon /></div>
-              <span className="ai-tool-name">Claude</span>
-            </div>
-            <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><ChatGPTIcon /></div>
               <span className="ai-tool-name">ChatGPT</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
-              <div className="ai-tool-icon"><CursorIcon /></div>
-              <span className="ai-tool-name">Cursor</span>
+              <div className="ai-tool-icon"><CodexIcon /></div>
+              <span className="ai-tool-name">Codex</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
-              <div className="ai-tool-icon"><ManusIcon /></div>
-              <span className="ai-tool-name">Manus</span>
+              <div className="ai-tool-icon"><ClaudeIcon /></div>
+              <span className="ai-tool-name">Claude Code</span>
+            </div>
+            <div className="ai-tool-item ai-tool-compact">
+              <div className="ai-tool-icon"><CursorIcon /></div>
+              <span className="ai-tool-name">Cursor</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><VsCodeIcon /></div>

@@ -2061,7 +2061,7 @@ video.cs-img-lg {
     border: 1px solid var(--color-accent);
     border-radius: var(--radius-md);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 14px;
 }
 

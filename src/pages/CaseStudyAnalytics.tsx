@@ -46,7 +46,7 @@ export function CaseStudyAnalytics() {
             </div>
             <div className="cs-meta-item">
               <span className="cs-meta-label">Product</span>
-              <span className="cs-meta-value">Actionable Insights — Global Dashboards, Market Insights, Network Insights</span>
+              <span className="cs-meta-value">Actionable Insights — Meta's B2B platform for Telecom Partners</span>
             </div>
             <div className="cs-meta-item">
               <span className="cs-meta-label">Impact</span>
@@ -565,7 +565,7 @@ export function CaseStudyAnalytics() {
               <h3>Meta-provided Opportunities</h3>
               <div className="cs-stat-highlight">
                 <span className="cs-stat-highlight-num">65%</span>
-                <span className="cs-stat-highlight-label">of H2 '25 team allocation — a new strategic track</span>
+                <span className="cs-stat-highlight-label">of the team's roadmap shifted to this new strategic track</span>
               </div>
               <ul>
                 <li>Defined the new strategic pillar vision and actionability framework, shaping a new product track</li>
@@ -584,7 +584,7 @@ export function CaseStudyAnalytics() {
               <ul>
                 <li>The system became core infrastructure, powering Opportunities, API, Prioritization, and GenAI</li>
                 <li>Impact extended beyond the Opportunities project, unlocking a long-awaited partner request: a self-serve API for custom in-product queries</li>
-                <li>Streamlined manual implementation, eliminating back-and-forth between teams and partners</li>
+                <li>Streamlined the manual implementation of API queries, eliminating back-and-forth between teams and partners.</li>
               </ul>
             </div>
           </div>
