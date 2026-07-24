@@ -67,17 +67,14 @@ export function CaseStudyAnalytics() {
           <div className="cs-narrative">
             <span className="cs-section-label">Project Overview</span>
             <h2>When the product strategy changed</h2>
-            <p>The product strategy shifted to focus on helping Partners grow revenue and reduce costs. After several workshops and design sprints, we aligned that increasing product actionability was a key way to achieve this.</p>
+            <p>The product strategy shifted to focus on helping partners grow revenue and reduce costs, with the goal of making the tool's business value and monetary impact more visible. Through several workshops and design sprints, we identified product actionability—or users' ability to make impactful business decisions—as the key strategy to achieve this.</p>
           </div>
 
           <div className="cs-definition">
-            <span className="cs-definition-label">How we defined actionability</span>
-            <p>Users' ability to use our product to make impactful business decisions that grow revenue and/or reduce costs — partners integrate our insights into their business process, learn something new from them, and take an action that can be attributed back to those insights.</p>
-          </div>
-
-          <div className="cs-narrative">
+            <span className="cs-definition-label">The Challenge</span>
             <p>Our product was primarily oriented toward data analysis and required partners to draw their own conclusions. We could drive more action by shifting the focus to helping users easily identify business opportunities in the product.</p>
           </div>
+
         </div>
       </section>
 
@@ -87,7 +84,7 @@ export function CaseStudyAnalytics() {
           <div className="cs-section-header-centered">
             <span className="cs-section-label">The Framework</span>
             <h2>Actionability framework</h2>
-            <p>We researched with Partners and defined the actionability framework: Partners want to use the Analytics product to understand their data, identify opportunities, and execute actions. By proactively helping partners identify business opportunities we can drive greater actionability in the product.</p>
+            <p>We researched with Partners and defined the actionability framework. By proactively helping partners identify business opportunities, we could drive and measure more actions taken directly from product insights.</p>
           </div>
 
           <div className="cs-funnel">
@@ -336,7 +333,9 @@ export function CaseStudyAnalytics() {
                 <p>This approach maximized traffic while reducing the MVP effort — partners couldn't miss the new surface, and we could ship faster.</p>
               </div>
               <div className="cs-col cs-col-media">
-                <img src="assets/oppo1.png" alt="Initial exploration — dedicated Opportunities page concept" className="cs-inline-img" />
+                <div className="cs-opportunities-zoom" tabIndex={0} aria-label="Hover or focus to zoom into the Opportunities for you panel">
+                  <img src="assets/oppo1.png" alt="Initial exploration — dedicated Opportunities page concept" className="cs-inline-img" />
+                </div>
               </div>
             </div>
           </div>
@@ -345,7 +344,9 @@ export function CaseStudyAnalytics() {
           <div className="cs-feature">
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col cs-col-media">
-                <img src="assets/Opportunities.png" alt="Opportunities widget on the Dashboards landing page" className="cs-inline-img" />
+                <div className="cs-opportunities-zoom cs-opportunities-zoom--right" tabIndex={0} aria-label="Hover or focus to zoom into the opportunities panel">
+                  <img src="assets/Opportunities.png" alt="Opportunities widget on the Dashboards landing page" className="cs-inline-img" />
+                </div>
               </div>
               <div className="cs-col">
                 <span className="cs-feature-eyebrow">02 — Opportunities Widget</span>
@@ -445,7 +446,7 @@ export function CaseStudyAnalytics() {
       {/* ========== CRITERIA ENGINE — capabilities ========== */}
       <section className="cs-section cs-bg-alt">
         <div className="section-container">
-          <div className="cs-two-col cs-two-col-media cs-two-col-media--lg">
+          <div className="cs-two-col cs-two-col-media cs-two-col-media--lg cs-criteria-engine-intro">
             <div className="cs-col">
               <span className="cs-section-label">The Solution</span>
               <h2>Criteria engine</h2>
@@ -467,19 +468,19 @@ export function CaseStudyAnalytics() {
           <div className="cs-img-grid-2">
             <figure className="cs-img-figure">
               <img src="assets/criteriaengine 7.png" alt="Criteria Engine — metric picker with Mobile and Broadband tabs" className="cs-inline-img" />
-              <figcaption className="cs-img-caption">Choosing a metric across product categories</figcaption>
+              <figcaption className="cs-img-caption cs-img-caption--accent">Choosing a metric across product categories</figcaption>
             </figure>
             <figure className="cs-img-figure">
               <img src="assets/criteriaengine 4.png" alt="Criteria Engine — custom builder with metric format options" className="cs-inline-img" />
-              <figcaption className="cs-img-caption">Metric format and performance options</figcaption>
+              <figcaption className="cs-img-caption cs-img-caption--accent">Metric format and performance options</figcaption>
             </figure>
             <figure className="cs-img-figure">
               <img src="assets/criteriaengine 5.png" alt="Criteria Engine — network and competitor comparison options" className="cs-inline-img" />
-              <figcaption className="cs-img-caption">Network and competitor comparisons</figcaption>
+              <figcaption className="cs-img-caption cs-img-caption--accent">Network and competitor comparisons</figcaption>
             </figure>
             <figure className="cs-img-figure">
               <img src="assets/criteriaengine 6.png" alt="Criteria Engine — range values for 'is between' comparison" className="cs-inline-img" />
-              <figcaption className="cs-img-caption">Range values with “is between”</figcaption>
+              <figcaption className="cs-img-caption cs-img-caption--accent">Range values with “is between”</figcaption>
             </figure>
           </div>
         </div>

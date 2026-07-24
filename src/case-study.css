@@ -288,6 +288,34 @@
     display: block;
 }
 
+/* Initial exploration: focus the hover zoom on the "Opportunities for you" panel. */
+.cs-opportunities-zoom {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    cursor: zoom-in;
+}
+
+.cs-opportunities-zoom .cs-inline-img {
+    transition: transform 360ms ease;
+    transform-origin: 50% 22%;
+}
+
+.cs-opportunities-zoom--right .cs-inline-img {
+    transform-origin: 100% 28%;
+}
+
+.cs-opportunities-zoom:hover .cs-inline-img,
+.cs-opportunities-zoom:focus-visible .cs-inline-img {
+    transform: scale(1.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cs-opportunities-zoom .cs-inline-img {
+        transition: none;
+    }
+}
+
 .cs-solution-image-grid {
     display: grid;
     grid-template-columns: repeat(3, var(--cs-media-w));
@@ -309,6 +337,15 @@
     color: var(--color-text-tertiary);
     text-align: center;
     margin: 0;
+}
+
+.cs-img-caption--accent {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
 }
 
 /* 2-column image grid for showing related screen variations */
@@ -1882,6 +1919,14 @@ video.cs-img-lg {
     grid-template-columns: 3fr 2fr;
 }
 
+/* Criteria Engine overview: center only the supporting visual; copy remains left-aligned. */
+.cs-criteria-engine-intro .cs-col-media {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
 /* GenAI Key Design Decisions: text 28.5% / image 71.5% — flips when image is on the left */
 .cs-decision .cs-two-col-media {
     grid-template-columns: 2.2fr 4.8fr;
@@ -2004,9 +2049,11 @@ video.cs-img-lg {
 
 .cs-image-cascade > img:nth-child(2) {
     bottom: 0;
-    left: 26%;
+    left: 27%;
     width: 38%;
-    z-index: 2;
+    z-index: 4;
+    border: 0;
+    box-shadow: none;
 }
 
 .cs-image-cascade > img:nth-child(3) {
