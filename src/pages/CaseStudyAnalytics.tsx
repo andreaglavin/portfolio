@@ -28,7 +28,7 @@ export function CaseStudyAnalytics() {
           </div>
           <h1 className="cs-hero-title">From Reporting to Action</h1>
           <p className="cs-hero-subtitle">Redesigning the Analytics Suite as a Decision-Support Engine</p>
-          <p className="cs-hero-intro">The product strategy shifted from data analysis to actionability — helping Partners grow revenue and reduce costs. I shaped the new strategic pillar, the Actionability Framework, and the end-to-end Opportunities experience across two delivery phases.</p>
+          <p className="cs-hero-intro">I transformed an analytics product into a decision support engine by shifting from passive data analysis to proactive business recommendations. I led the definition of the product strategy and the end-to-end suite experience, aligning multiple product areas around a cohesive vision.</p>
         </div>
       </header>
 
