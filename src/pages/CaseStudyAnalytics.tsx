@@ -67,7 +67,7 @@ export function CaseStudyAnalytics() {
           <div className="cs-narrative">
             <span className="cs-section-label">Project Overview</span>
             <h2>When the product strategy changed</h2>
-            <p>The product strategy shifted to focus on helping partners grow revenue and reduce costs, with the goal of making the tool's business value and monetary impact more visible. Through several workshops and design sprints, we identified product actionability—or users' ability to make impactful business decisions—as the key strategy to achieve this.</p>
+            <p>With the goal of making the tool's business value and monetary impact more visible to support negotiations with Telecom partners, the product strategy shifted to focus on measuring how the product helped partners grow revenue and reduce costs. Through several workshops and design sprints, we identified product actionability as the key strategy to achieve this.</p>
           </div>
 
           <div className="cs-definition">
@@ -111,7 +111,7 @@ export function CaseStudyAnalytics() {
           </div>
 
           <div className="cs-funnel-footer">
-            <p>We defined two ways to help Partners identify opportunities: provide them directly (<strong>Meta-provided Opportunities</strong>) and enable them to define their own (<strong>Partner-derived Opportunities</strong>) — the basis for the two delivery phases of this project.</p>
+            <p>We defined two ways to help Partners identify business opportunities: provide them directly (<strong>Meta-provided Opportunities</strong>) and enable them to define their own (<strong>Partner-derived Opportunities</strong>) — the basis for the two delivery phases of this project.</p>
           </div>
         </div>
       </section>
@@ -269,7 +269,7 @@ export function CaseStudyAnalytics() {
           <div className="cs-section-header-centered">
             <span className="cs-section-label">Surfaces & Users</span>
             <h2>Entry points and user archetypes</h2>
-            <p>We defined the entry points and how they would connect to different user archetypes. Opportunities should be integrated and surfaced throughout the portal to create a seamless user experience.</p>
+            <p>We defined the entry points and how they would connect to different user archetypes. Business opportunities should be integrated and surfaced throughout the portal to create a seamless user experience.</p>
           </div>
 
           <div className="cs-archetypes">
@@ -315,7 +315,7 @@ export function CaseStudyAnalytics() {
           <span className="cs-phase-divider-eyebrow">Phase 1 — MVP</span>
           <span className="cs-phase-divider-num">01</span>
           <h2 className="cs-phase-divider-title">Meta-provided Opportunities</h2>
-          <p className="cs-phase-divider-sub">Surfacing curated opportunities directly inside Dashboards — fast value, low build risk, executive-friendly.</p>
+          <p className="cs-phase-divider-sub">Surfacing curated business opportunities directly inside Dashboards — fast value, low build risk, executive-friendly.</p>
         </div>
       </section>
 
@@ -327,8 +327,8 @@ export function CaseStudyAnalytics() {
           <div className="cs-feature">
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
-                <span className="cs-feature-eyebrow">01 — Initial Explorations</span>
-                <h3>From a dedicated page to the landing page</h3>
+                <span className="cs-feature-eyebrow">Initial Exploration</span>
+                <h3>Dedicated page</h3>
                 <p>We began exploring the consolidation of opportunities into a dedicated global page, but after weighing the pros and cons, we decided to pivot and surface opportunities on the landing page instead.</p>
                 <p>This approach maximized traffic while reducing the MVP effort — partners couldn't miss the new surface, and we could ship faster.</p>
               </div>
@@ -349,8 +349,8 @@ export function CaseStudyAnalytics() {
                 </div>
               </div>
               <div className="cs-col">
-                <span className="cs-feature-eyebrow">02 — Opportunities Widget</span>
-                <h3>Top 3 opportunities for each use case</h3>
+                <span className="cs-feature-eyebrow">MVP final solution</span>
+                <h3>Opportunities on the landing page</h3>
                 <p>We added a widget to the landing page featuring the top 3 opportunities for each use case, aiming to maximize exposure during the MVP release.</p>
                 <p>We supported two initial use cases: Convergence and Video Experience. This involved collaborating with all cross-vertical teams to align on criteria and thresholds — creating the first experience where metrics from different product verticals were integrated.</p>
               </div>
@@ -361,7 +361,7 @@ export function CaseStudyAnalytics() {
           <div className="cs-feature">
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
-                <span className="cs-feature-eyebrow">03 — Opportunities Life-cycle</span>
+                <span className="cs-feature-eyebrow">Opportunities Life-cycle</span>
                 <h3>New and changed indications</h3>
                 <p>We defined the life cycle of opportunities, including timeframes for updating them and mechanisms to draw user attention. Additionally, we established a notifications and email system to inform users.</p>
                 <ul>
@@ -379,13 +379,15 @@ export function CaseStudyAnalytics() {
           <div className="cs-feature">
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col cs-col-media">
-                <img src="assets/Oppo3.png" alt="Opportunity details page (Figma Make prototype)" className="cs-inline-img" />
+                <div className="cs-opportunities-zoom cs-opportunities-zoom--center" tabIndex={0} aria-label="Hover or focus to zoom into the opportunity details page">
+                  <img src="assets/Oppo3.png" alt="Opportunity details page (Figma Make prototype)" className="cs-inline-img" />
+                </div>
               </div>
               <div className="cs-col">
-                <span className="cs-feature-eyebrow">04 — Opportunity Details Page</span>
-                <h3>Context, reasoning, and competitive insights</h3>
+                <span className="cs-feature-eyebrow">Opportunity Details Page</span>
+                <h3>Contextual &amp; Holistic Insights</h3>
                 <p>We created a preview page that provides clear context and a holistic view of the reasons behind each opportunity, including the contributing factors and why Meta believes it is a good business opportunity. The page also offers additional competitive insights to encourage users to take action.</p>
-                <p>We'll connect this workflow to the Market, Network, and Roaming surfaces so partners can:</p>
+                <p>We connected this workflow to the Market, Network, and Roaming surfaces so partners can:</p>
                 <ul>
                   <li>View supporting data</li>
                   <li>Gain more confidence to take action</li>
@@ -395,18 +397,20 @@ export function CaseStudyAnalytics() {
           </div>
 
           {/* Feature: Sharing, hiding, downloading */}
-          <div className="cs-feature">
+          <div className="cs-feature cs-feature--cascade">
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
-                <span className="cs-feature-eyebrow">05 — Sharing, Hiding, Downloading</span>
-                <h3>Keeping suggestions relevant — and shareable</h3>
+                <span className="cs-feature-eyebrow">Sharing, Hiding</span>
+                <h3>Keeping Opportunities Relevant</h3>
                 <p>We added a feature that enables users to dismiss opportunities and view the next recommended one, ensuring suggestions remain relevant.</p>
                 <p>We also added sharing functionality to promote collaboration across teams, as well as notifications and emails to foster engagement.</p>
               </div>
               <div className="cs-col cs-col-media">
                 <div className="cs-image-cascade">
-                  <img src="assets/oppo6.png" alt="Share opportunity modal" />
-                  <img src="assets/Oppo7.png" alt="Hide opportunity modal with feedback options" />
+                  <img className="cs-image-cascade-hide" src="assets/Oppo7.png" alt="Hide opportunity modal with feedback options" />
+                  <div className="cs-image-cascade-zoom">
+                    <img className="cs-image-cascade-share" src="assets/oppo6.png" alt="Share opportunity modal" />
+                  </div>
                   <img src="assets/Oppo8.png" alt="Shared opportunity email notification" />
                 </div>
               </div>

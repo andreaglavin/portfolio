@@ -305,6 +305,15 @@
     transform-origin: 100% 28%;
 }
 
+.cs-opportunities-zoom--center .cs-inline-img {
+    transform-origin: center;
+}
+
+.cs-opportunities-zoom--center:hover .cs-inline-img,
+.cs-opportunities-zoom--center:focus-visible .cs-inline-img {
+    transform: scale(1.05);
+}
+
 .cs-opportunities-zoom:hover .cs-inline-img,
 .cs-opportunities-zoom:focus-visible .cs-inline-img {
     transform: scale(1.75);
@@ -314,6 +323,7 @@
     .cs-opportunities-zoom .cs-inline-img {
         transition: none;
     }
+
 }
 
 .cs-solution-image-grid {
@@ -1843,6 +1853,12 @@ video.cs-img-lg {
     border-top: 0;
 }
 
+/* Compensate for the cascade images extending beyond their own layout box. */
+.cs-feature--cascade {
+    padding-top: 105px;
+    padding-bottom: 115px;
+}
+
 .cs-feature-eyebrow {
     font-family: var(--font-heading);
     font-size: 12px;
@@ -2047,18 +2063,37 @@ video.cs-img-lg {
     z-index: 1;
 }
 
-.cs-image-cascade > img:nth-child(2) {
-    bottom: 0;
-    left: 27%;
-    width: 38%;
+.cs-image-cascade > :nth-child(2) {
+    bottom: -7%;
+    left: 27.1%;
+    width: 43.9%;
     z-index: 4;
+}
+
+.cs-image-cascade > .cs-image-cascade-hide,
+.cs-image-cascade-share,
+.cs-image-cascade-zoom {
     border: 0;
     box-shadow: none;
 }
 
+.cs-image-cascade-zoom {
+    position: absolute;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+}
+
+.cs-image-cascade-zoom .cs-image-cascade-share {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transform-origin: 50.5% 51.5%;
+}
+
 .cs-image-cascade > img:nth-child(3) {
-    top: 0;
-    right: 0;
+    top: -5%;
+    right: 2%;
     width: 36%;
     z-index: 3;
 }
