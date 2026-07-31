@@ -27,8 +27,8 @@ export function CaseStudyAnalytics() {
             <span className="tag">Data Analytics</span>
           </div>
           <h1 className="cs-hero-title">From Reporting to Action</h1>
-          <p className="cs-hero-subtitle">Redesigning the Analytics Suite as a Decision-Support Engine</p>
-          <p className="cs-hero-intro">I transformed an analytics product into a decision support engine by shifting from passive data analysis to proactive business recommendations. I led the definition of the product strategy and the end-to-end suite experience, aligning multiple product areas around a cohesive vision.</p>
+          <p className="cs-hero-subtitle">Transforming an Analytics Suite into a Decision Support Engine</p>
+          <p className="cs-hero-intro">I drove the transformation of an analytics product from a passive data analysis tool into a decision support engine through proactive business recommendations. I led the definition of the product strategy and the end-to-end suite experience, aligning multiple teams around a cohesive vision.</p>
         </div>
       </header>
 
@@ -58,7 +58,7 @@ export function CaseStudyAnalytics() {
 
       {/* ========== HERO IMAGE ========== */}
       <div className="cs-image-fullbleed">
-        <img src="assets/Opportunities.png" alt="Opportunities surfaced inside the Global Dashboards Home/Overview tab" className="cs-hero-img" />
+        <img src="assets/Opportunities.png" alt="Opportunities surfaced inside the Global Dashboards Home/Overview tab" className="cs-hero-img cs-analytics-hero-image" />
       </div>
 
       {/* ========== PROJECT OVERVIEW (narrative + definition callout) ========== */}
@@ -267,44 +267,58 @@ export function CaseStudyAnalytics() {
       <section className="cs-section cs-bg-alt">
         <div className="section-container">
           <div className="cs-section-header-centered">
-            <span className="cs-section-label">Surfaces & Users</span>
-            <h2>Entry points and user archetypes</h2>
-            <p>We defined the entry points and how they would connect to different user archetypes. Business opportunities should be integrated and surfaced throughout the portal to create a seamless user experience.</p>
+            <span className="cs-section-label">Decision Matrix</span>
+            <h2>Product-Strategy Decision Tool</h2>
+            <p>Faced with multiple stakeholders, cross-functional teams, and an ambiguous problem space, I created a decision matrix to objectively evaluate concepts against strategic criteria and clarify the tradeoffs of each direction.</p>
           </div>
 
-          <div className="cs-archetypes">
-            <div className="cs-archetypes-head"></div>
-            <div className="cs-archetypes-head">Centralized</div>
-            <div className="cs-archetypes-head">Embedded</div>
-            <div className="cs-archetypes-head">Out of product</div>
-
-            <div className="cs-archetypes-label">Entry points</div>
-            <div className="cs-archetypes-cell">
-              <span className="cs-archetype-chip">Opportunities page</span>
-              <span className="cs-archetype-chip">Home page summary</span>
-            </div>
-            <div className="cs-archetypes-cell">
-              <span className="cs-archetype-chip">Dashboards</span>
-              <span className="cs-archetype-chip">Product pages</span>
-              <span className="cs-archetype-chip">Notifications</span>
-            </div>
-            <div className="cs-archetypes-cell">
-              <span className="cs-archetype-chip">Emails</span>
-            </div>
-
-            <div className="cs-archetypes-label">User archetype</div>
-            <div className="cs-archetypes-cell">
-              <span className="cs-archetype-chip">C-level executives</span>
-              <span className="cs-archetype-chip">Decision makers</span>
-            </div>
-            <div className="cs-archetypes-cell">
-              <span className="cs-archetype-chip">Analysts</span>
-            </div>
-            <div className="cs-archetypes-cell">
-              <span className="cs-archetype-chip">C-level executives</span>
-              <span className="cs-archetype-chip">Decision makers</span>
-              <span className="cs-archetype-chip">Analysts</span>
-            </div>
+          <div className="cs-surface-matrix-wrap">
+            <table className="cs-surface-matrix">
+              <thead>
+                <tr>
+                  <th scope="col">Surface</th>
+                  <th scope="col">User archetype</th>
+                  <th scope="col">Traffic volume</th>
+                  <th scope="col">Data readiness</th>
+                  <th scope="col">MVP effort</th>
+                  <th scope="col">Technical constraints</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">New opportunities page</th>
+                  <td><div className="cs-surface-matrix-tokens"><span>C-level executives</span><span>Decision makers</span><span>Analysts</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Low</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Medium</span><span>Cross-product data</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>High</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Cross-product surface</span><span>Navigation</span><span>Data aggregation</span></div></td>
+                </tr>
+                <tr>
+                  <th scope="row">Landing page widget</th>
+                  <td><div className="cs-surface-matrix-tokens"><span>C-level executives</span><span>Decision makers</span><span>Analysts</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>High</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>High</span><span>Curated data</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Low</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Curated ranking</span><span>Landing-page integration</span></div></td>
+                </tr>
+                <tr>
+                  <th scope="row">Embedded across all product pages</th>
+                  <td><div className="cs-surface-matrix-tokens"><span>Decision makers</span><span>Analysts</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>High</span><span>Contextual</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Varies by product</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>High</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Product integrations</span><span>Tailored data context</span></div></td>
+                </tr>
+                <tr>
+                  <th scope="row">Business opportunity dashboards</th>
+                  <td><div className="cs-surface-matrix-tokens"><span>C-level executives</span><span>Decision makers</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Medium</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Medium</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Medium</span></div></td>
+                  <td><div className="cs-surface-matrix-tokens"><span>Grouping</span><span>Filtering</span><span>Prioritization</span></div></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -315,7 +329,7 @@ export function CaseStudyAnalytics() {
           <span className="cs-phase-divider-eyebrow">Phase 1 — MVP</span>
           <span className="cs-phase-divider-num">01</span>
           <h2 className="cs-phase-divider-title">Meta-provided Opportunities</h2>
-          <p className="cs-phase-divider-sub">Surfacing curated business opportunities directly inside Dashboards — fast value, low build risk, executive-friendly.</p>
+          <p className="cs-phase-divider-sub">We conducted research with partners to understand the key business opportunities they wanted to uncover, along with the criteria and metrics they used to identify them.</p>
         </div>
       </section>
 
@@ -328,9 +342,8 @@ export function CaseStudyAnalytics() {
             <div className="cs-two-col cs-two-col-media">
               <div className="cs-col">
                 <span className="cs-feature-eyebrow">Initial Exploration</span>
-                <h3>Dedicated page</h3>
+                <h3>Dedicated Page</h3>
                 <p>We began exploring the consolidation of opportunities into a dedicated global page, but after weighing the pros and cons, we decided to pivot and surface opportunities on the landing page instead.</p>
-                <p>This approach maximized traffic while reducing the MVP effort — partners couldn't miss the new surface, and we could ship faster.</p>
               </div>
               <div className="cs-col cs-col-media">
                 <div className="cs-opportunities-zoom" tabIndex={0} aria-label="Hover or focus to zoom into the Opportunities for you panel">
@@ -351,38 +364,15 @@ export function CaseStudyAnalytics() {
               <div className="cs-col">
                 <span className="cs-feature-eyebrow">MVP final solution</span>
                 <h3>Opportunities on the landing page</h3>
-                <p>We added a widget to the landing page featuring the top 3 opportunities for each use case, aiming to maximize exposure during the MVP release.</p>
+                <p>We added a widget to the landing page featuring the top 3 opportunities for each use case, aiming to maximize traffic while minimizing effort for the MVP.</p>
                 <p>We supported two initial use cases: Convergence and Video Experience. This involved collaborating with all cross-vertical teams to align on criteria and thresholds — creating the first experience where metrics from different product verticals were integrated.</p>
               </div>
             </div>
           </div>
 
-          {/* Feature: Life-cycle */}
+          {/* Feature: Details page */}
           <div className="cs-feature">
             <div className="cs-two-col cs-two-col-media">
-              <div className="cs-col">
-                <span className="cs-feature-eyebrow">Opportunities Life-cycle</span>
-                <h3>New and changed indications</h3>
-                <p>We defined the life cycle of opportunities, including timeframes for updating them and mechanisms to draw user attention. Additionally, we established a notifications and email system to inform users.</p>
-                <ul>
-                  <li>Indicate new opportunities (compared to the previous week) with a purple pill</li>
-                  <li>Indicate a significant change in metrics with the % change</li>
-                </ul>
-              </div>
-              <div className="cs-col cs-col-media">
-                <img src="assets/Prototype - opportunities 1.gif" alt="Opportunities widget prototype — new/changed indicators and actions menu" className="cs-inline-img cs-img-constrained" style={{ maxHeight: '572px' }} />
-              </div>
-            </div>
-          </div>
-
-          {/* Feature: Details page (image left) */}
-          <div className="cs-feature">
-            <div className="cs-two-col cs-two-col-media">
-              <div className="cs-col cs-col-media">
-                <div className="cs-opportunities-zoom cs-opportunities-zoom--center" tabIndex={0} aria-label="Hover or focus to zoom into the opportunity details page">
-                  <img src="assets/Oppo3.png" alt="Opportunity details page (Figma Make prototype)" className="cs-inline-img" />
-                </div>
-              </div>
               <div className="cs-col">
                 <span className="cs-feature-eyebrow">Opportunity Details Page</span>
                 <h3>Contextual &amp; Holistic Insights</h3>
@@ -391,6 +381,29 @@ export function CaseStudyAnalytics() {
                 <ul>
                   <li>View supporting data</li>
                   <li>Gain more confidence to take action</li>
+                </ul>
+              </div>
+              <div className="cs-col cs-col-media">
+                <div className="cs-opportunities-zoom cs-opportunities-zoom--center" tabIndex={0} aria-label="Hover or focus to zoom into the opportunity details page">
+                  <img src="assets/Oppo3.png" alt="Opportunity details page (Figma Make prototype)" className="cs-inline-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Feature: Life-cycle (image left) */}
+          <div className="cs-feature">
+            <div className="cs-two-col cs-two-col-media">
+              <div className="cs-col cs-col-media">
+                <img src="assets/Prototype - opportunities 1.gif" alt="Opportunities widget prototype — new/changed indicators and actions menu" className="cs-inline-img cs-img-constrained" style={{ maxHeight: '572px' }} />
+              </div>
+              <div className="cs-col">
+                <span className="cs-feature-eyebrow">Opportunities Life-cycle</span>
+                <h3>Lifecycle &amp; User Engagement Signals</h3>
+                <p>We defined the life cycle of opportunities, including timeframes for updating them and mechanisms to draw user attention. Additionally, we established a notifications and email system to inform users.</p>
+                <ul>
+                  <li>Indicate new opportunities (compared to the previous week) with a purple pill</li>
+                  <li>Indicate a significant change in metrics with the % change</li>
                 </ul>
               </div>
             </div>
@@ -403,7 +416,7 @@ export function CaseStudyAnalytics() {
                 <span className="cs-feature-eyebrow">Sharing, Hiding</span>
                 <h3>Keeping Opportunities Relevant</h3>
                 <p>We added a feature that enables users to dismiss opportunities and view the next recommended one, ensuring suggestions remain relevant.</p>
-                <p>We also added sharing functionality to promote collaboration across teams, as well as notifications and emails to foster engagement.</p>
+                <p>We also introduced sharing to promote collaboration across teams, along with notifications and email alerts to drive engagement.</p>
               </div>
               <div className="cs-col cs-col-media">
                 <div className="cs-image-cascade">
@@ -426,7 +439,7 @@ export function CaseStudyAnalytics() {
           <span className="cs-phase-divider-eyebrow">Phase 2 — Scale</span>
           <span className="cs-phase-divider-num">02</span>
           <h2 className="cs-phase-divider-title">User-derived (custom) opportunities</h2>
-          <p className="cs-phase-divider-sub">Building a new criteria engine that lets partners define their own opportunities across the entire suite.</p>
+          <p className="cs-phase-divider-sub">We built a new criteria engine that enables partners to define and manage their own business opportunities across the entire suite.</p>
         </div>
       </section>
 
@@ -436,13 +449,12 @@ export function CaseStudyAnalytics() {
           <div className="cs-narrative">
             <span className="cs-section-label">Phase 2 — The Problem</span>
             <h2>A new criteria engine / filtering mechanism</h2>
-            <p>The product's current filtering capabilities were insufficient, making it impossible for partners to define and apply criteria that would enable them to create business opportunities. The existing filters lacked the flexibility needed to accommodate each partner's unique business needs.</p>
-            <p>We needed to create a complex mechanism that consolidates all datasets from the product, enabling users to define custom, free-form criteria (conditions/thresholds) that filter data. This would allow partners to identify high-priority areas and opportunities.</p>
+            <p>The product's current filtering capabilities were insufficient, making it impossible for partners to define and apply criteria that would enable them to create business opportunities.</p>
           </div>
 
           <div className="cs-definition">
-            <span className="cs-definition-label">The unlock</span>
-            <p>This need led to the creation of the <strong>Criteria Engine</strong> — a foundational capability for making the product more actionable. By enabling partners to gain a global view of their data and filter down to only what matters, the Criteria Engine replaces prior spot-check workflows.</p>
+            <span className="cs-definition-label">The Challenge</span>
+            <p>We needed to design a complex mechanism that consolidates all datasets from the product, enabling users to define custom, free-form criteria (conditions/thresholds) that filter data. This would allow partners to identify high-priority areas and opportunities.</p>
           </div>
         </div>
       </section>
@@ -454,8 +466,7 @@ export function CaseStudyAnalytics() {
             <div className="cs-col">
               <span className="cs-section-label">The Solution</span>
               <h2>Criteria engine</h2>
-              <p>Designed a system that expanded across the complete suite, enabling thousands of new data combinations — a complex cross-product system with varying data requirements and differences across products.</p>
-              <p>Allows complex customizations and thousands of unique data combinations:</p>
+              <p>I designed a scalable system that expanded across the entire suite, enabling thousands of new data combinations. It unified a complex cross-product ecosystem with varying data requirements while supporting deep customization through a flexible, reusable framework;</p>
               <ul className="cs-list">
                 <li><strong>Boolean & arithmetic operations</strong></li>
                 <li><strong>All metrics and metric cuts</strong></li>

@@ -193,6 +193,19 @@
     margin: 0 auto;
 }
 
+.cs-hero-img.cs-vision-image {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.cs-hero-img.cs-genai-hero-image,
+.cs-hero-img.cs-analytics-hero-image {
+    display: block;
+    width: 95%;
+    margin: 48px auto;
+}
+
 .cs-image-placeholder {
     width: 100%;
     aspect-ratio: 16/9;
@@ -309,9 +322,9 @@
     transform-origin: center;
 }
 
-.cs-opportunities-zoom--center:hover .cs-inline-img,
-.cs-opportunities-zoom--center:focus-visible .cs-inline-img {
-    transform: scale(1.05);
+.cs-opportunities-zoom.cs-opportunities-zoom--center:hover .cs-inline-img,
+.cs-opportunities-zoom.cs-opportunities-zoom--center:focus-visible .cs-inline-img {
+    transform: scale(1.43);
 }
 
 .cs-opportunities-zoom:hover .cs-inline-img,
@@ -873,6 +886,10 @@ video.cs-img-lg {
 
 .cs-vision p {
     font-size: 18px;
+}
+
+.cs-vision-section .cs-image-fullbleed {
+    margin-top: 64px;
 }
 
 /* ============================================
@@ -1776,28 +1793,39 @@ video.cs-img-lg {
 }
 
 /* ============================================
-   ARCHETYPES MATRIX (entry points × users)
+   SURFACE DECISION MATRIX
    ============================================ */
-.cs-archetypes {
-    display: grid;
-    grid-template-columns: 140px repeat(3, 1fr);
-    gap: 1px;
-    background: var(--color-border);
+.cs-surface-matrix-wrap {
+    margin-top: 32px;
+    overflow-x: auto;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    overflow: hidden;
-    margin-top: 32px;
 }
 
-.cs-archetypes-head,
-.cs-archetypes-cell,
-.cs-archetypes-label {
-    background: var(--color-surface-2);
+.cs-surface-matrix {
+    width: 100%;
+    min-width: 1140px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.cs-surface-matrix th,
+.cs-surface-matrix td {
     padding: 20px 18px;
-    min-height: 80px;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
 }
 
-.cs-archetypes-head {
+.cs-surface-matrix tr > :last-child {
+    border-right: 0;
+}
+
+.cs-surface-matrix tbody tr:last-child > * {
+    border-bottom: 0;
+}
+
+.cs-surface-matrix thead th {
     font-family: var(--font-heading);
     font-size: 12px;
     font-weight: 700;
@@ -1805,40 +1833,40 @@ video.cs-img-lg {
     text-transform: uppercase;
     color: var(--color-accent);
     background: var(--color-surface-3);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.cs-archetypes-label {
+.cs-surface-matrix tbody th {
+    width: 180px;
     font-family: var(--font-heading);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-text-secondary);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
     background: var(--color-surface-3);
-    display: flex;
-    align-items: center;
 }
 
-.cs-archetypes-cell {
+.cs-surface-matrix td {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    background: var(--color-surface-2);
+}
+
+.cs-surface-matrix-tokens {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    align-content: center;
 }
 
-.cs-archetype-chip {
+.cs-surface-matrix-tokens span {
     font-family: var(--font-heading);
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
     color: var(--color-text);
     background: var(--color-surface-3);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     padding: 6px 10px;
-    border: 1px solid var(--color-border);
 }
 
 /* ============================================
@@ -2270,6 +2298,10 @@ video.cs-img-lg {
         padding: 80px 0;
     }
 
+    .cs-vision-section .cs-image-fullbleed {
+        margin-top: 48px;
+    }
+
     .cs-bottom-nav-inner {
         flex-direction: column;
         gap: 16px;
@@ -2355,13 +2387,9 @@ video.cs-img-lg {
         grid-template-columns: 1fr;
     }
 
-    .cs-archetypes {
-        grid-template-columns: 1fr;
-    }
-
-    .cs-archetypes-head:not(:first-of-type),
-    .cs-archetypes-label {
-        display: block;
+    .cs-surface-matrix th,
+    .cs-surface-matrix td {
+        padding: 16px 14px;
     }
 
     .cs-definition {

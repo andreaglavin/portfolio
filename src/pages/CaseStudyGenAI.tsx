@@ -47,7 +47,7 @@ export function CaseStudyGenAI() {
 
       {/* ========== HERO IMAGE (full-bleed) ========== */}
       <div className="cs-image-fullbleed">
-        <img src="assets/9o.png" alt="GenAI Filtering Panel on Maps Interface" className="cs-hero-img" />
+        <img src="assets/9o.png" alt="GenAI Filtering Panel on Maps Interface" className="cs-hero-img cs-genai-hero-image" />
       </div>
 
       {/* ========== CONTEXT + CHALLENGE (side-by-side) ========== */}
@@ -206,8 +206,8 @@ export function CaseStudyGenAI() {
       <section className="cs-section cs-bg-elevated">
         <div className="section-container">
           <div className="cs-section-header-centered">
-            <span className="cs-section-label">Design Framework</span>
-            <h2>Defining the Experience</h2>
+            <span className="cs-section-label">Optimizing the Experience</span>
+            <h2>Design Principles</h2>
             <p>Based on the research findings, we defined three design principles and crafted an experience to support them.</p>
           </div>
           <div className="cs-principles cs-principles--row">
@@ -452,15 +452,14 @@ export function CaseStudyGenAI() {
         <div className="section-container">
           <div className="cs-vision">
             <span className="cs-section-label">Looking Ahead</span>
-            <h2>Long-Term Vision — The Analytics Agent</h2>
+            <h2>Long-Term Vision —<br />The Analytics Agent</h2>
             <p>The scope of this feature extends beyond filtration. The GenAI panel was designed as the foundation for a future <strong>Analytics Agent</strong> — an AI-powered assistant that can autonomously apply filters, generate visualizations, surface insights, and manipulate the product's interface on behalf of the user.</p>
           </div>
         </div>
+        <div className="cs-image-fullbleed">
+          <img src="assets/26.png" alt="Long-Term Vision — Analytics Agent Concept" className="cs-hero-img cs-vision-image" />
+        </div>
       </section>
-
-      <div className="cs-image-fullbleed">
-        <img src="assets/26.png" alt="Long-Term Vision — Analytics Agent Concept" className="cs-hero-img" />
-      </div>
 
       {/* ========== RESULTS ========== */}
       <section className="cs-section cs-bg-base cs-results-section">
