@@ -17,7 +17,7 @@ export function CaseStudyGenAI() {
           </div>
           <h1 className="cs-hero-title">GenAI for Filtering</h1>
           <p className="cs-hero-subtitle">Designing the Future of Data Exploration</p>
-          <p className="cs-hero-intro">I led the UX design for Meta's first GenAI-powered feature in the Actionable Insights portal — a natural language querying system that lets Telecom Partners explore complex network and market data conversationally.</p>
+          <p className="cs-hero-intro">Proactively led the design of Meta's first GenAI-powered feature in the Actionable Insights portal—a natural language querying system that enabled telecom partners to explore complex network and market data conversationally.</p>
         </div>
       </header>
 
