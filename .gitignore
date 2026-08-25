@@ -33,3 +33,6 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Design explorations (kept locally, not shipped or committed)
+design-explorations/

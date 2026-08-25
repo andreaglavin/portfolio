@@ -2,15 +2,47 @@ import { useRef, useState } from 'react';
 import { CaseStudyLayout } from './CaseStudyLayout';
 import { backToWorkSection } from './backToWorkSection';
 
+const criteriaEngineSlides = [
+  {
+    src: 'assets/criteriaengine 7.png',
+    alt: 'Criteria Engine — metric picker with Mobile and Broadband tabs',
+    caption: 'Choosing a metric across product categories',
+  },
+  {
+    src: 'assets/criteriaengine 4.png',
+    alt: 'Criteria Engine — custom builder with metric format options',
+    caption: 'Metric format and performance options',
+  },
+  {
+    src: 'assets/criteriaengine 5.png',
+    alt: 'Criteria Engine — network and competitor comparison options',
+    caption: 'Network and competitor comparisons',
+  },
+  {
+    src: 'assets/criteriaengine 6.png',
+    alt: 'Criteria Engine — range values for “is between” comparison',
+    caption: 'Range values with “is between”',
+  },
+];
+
 export function CaseStudyAnalytics() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [criteriaSlideIndex, setCriteriaSlideIndex] = useState(0);
 
   const togglePlay = () => {
     const v = videoRef.current;
     if (!v) return;
     if (v.paused) v.play();
     else v.pause();
+  };
+
+  const showPreviousCriteriaSlide = () => {
+    setCriteriaSlideIndex((index) => (index - 1 + criteriaEngineSlides.length) % criteriaEngineSlides.length);
+  };
+
+  const showNextCriteriaSlide = () => {
+    setCriteriaSlideIndex((index) => (index + 1) % criteriaEngineSlides.length);
   };
 
   return (
@@ -263,8 +295,24 @@ export function CaseStudyAnalytics() {
         </div>
       </section>
 
-      {/* ========== ENTRY POINTS & ARCHETYPES ========== */}
+      {/* ========== INITIAL EXPLORATION ========== */}
       <section className="cs-section cs-bg-alt">
+        <div className="section-container">
+          <div className="cs-two-col cs-two-col-media cs-two-col-media--lg">
+            <div className="cs-col">
+              <span className="cs-section-label">Initial Exploration</span>
+              <h2>Dedicated Opportunities page</h2>
+              <p>We began exploring the consolidation of opportunities into a dedicated global page, but after weighing the pros and cons, we decided to pivot and surface opportunities on the landing page instead.</p>
+            </div>
+            <div className="cs-col cs-col-media">
+              <img src="assets/oppo1.png" alt="Initial exploration — dedicated Opportunities page concept" className="cs-inline-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== ENTRY POINTS & ARCHETYPES ========== */}
+      <section className="cs-section cs-bg-base">
         <div className="section-container">
           <div className="cs-section-header-centered">
             <span className="cs-section-label">Decision Matrix</span>
@@ -336,22 +384,6 @@ export function CaseStudyAnalytics() {
       {/* ========== PHASE 1 FEATURES ========== */}
       <section className="cs-bg-base cs-phase1-features">
         <div className="section-container">
-
-          {/* Feature: Initial explorations */}
-          <div className="cs-feature">
-            <div className="cs-two-col cs-two-col-media">
-              <div className="cs-col">
-                <span className="cs-feature-eyebrow">Initial Exploration</span>
-                <h3>Dedicated Page</h3>
-                <p>We began exploring the consolidation of opportunities into a dedicated global page, but after weighing the pros and cons, we decided to pivot and surface opportunities on the landing page instead.</p>
-              </div>
-              <div className="cs-col cs-col-media">
-                <div className="cs-opportunities-zoom" tabIndex={0} aria-label="Hover or focus to zoom into the Opportunities for you panel">
-                  <img src="assets/oppo1.png" alt="Initial exploration — dedicated Opportunities page concept" className="cs-inline-img" />
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Feature: Opportunities widget (image left) */}
           <div className="cs-feature">
@@ -480,23 +512,40 @@ export function CaseStudyAnalytics() {
             </div>
           </div>
 
-          <div className="cs-img-grid-2">
-            <figure className="cs-img-figure">
-              <img src="assets/criteriaengine 7.png" alt="Criteria Engine — metric picker with Mobile and Broadband tabs" className="cs-inline-img" />
-              <figcaption className="cs-img-caption cs-img-caption--accent">Choosing a metric across product categories</figcaption>
-            </figure>
-            <figure className="cs-img-figure">
-              <img src="assets/criteriaengine 4.png" alt="Criteria Engine — custom builder with metric format options" className="cs-inline-img" />
-              <figcaption className="cs-img-caption cs-img-caption--accent">Metric format and performance options</figcaption>
-            </figure>
-            <figure className="cs-img-figure">
-              <img src="assets/criteriaengine 5.png" alt="Criteria Engine — network and competitor comparison options" className="cs-inline-img" />
-              <figcaption className="cs-img-caption cs-img-caption--accent">Network and competitor comparisons</figcaption>
-            </figure>
-            <figure className="cs-img-figure">
-              <img src="assets/criteriaengine 6.png" alt="Criteria Engine — range values for 'is between' comparison" className="cs-inline-img" />
-              <figcaption className="cs-img-caption cs-img-caption--accent">Range values with “is between”</figcaption>
-            </figure>
+          <div className="cs-media-carousel" aria-roledescription="carousel" aria-label="Criteria Engine examples">
+            <div className="cs-media-carousel__viewport">
+              <figure className="cs-img-figure cs-media-carousel__slide">
+                <img
+                  src={criteriaEngineSlides[criteriaSlideIndex].src}
+                  alt={criteriaEngineSlides[criteriaSlideIndex].alt}
+                  className="cs-inline-img"
+                />
+                <figcaption className="cs-img-caption cs-img-caption--accent">
+                  {criteriaEngineSlides[criteriaSlideIndex].caption}
+                </figcaption>
+              </figure>
+            </div>
+            <div className="cs-media-carousel__controls">
+              <button type="button" className="cs-media-carousel__button" onClick={showPreviousCriteriaSlide} aria-label="Show previous Criteria Engine example">
+                ←
+              </button>
+              <div className="cs-media-carousel__dots" role="tablist" aria-label="Choose a Criteria Engine example">
+                {criteriaEngineSlides.map((slide, index) => (
+                  <button
+                    key={slide.src}
+                    type="button"
+                    className={`cs-media-carousel__dot${index === criteriaSlideIndex ? ' is-active' : ''}`}
+                    onClick={() => setCriteriaSlideIndex(index)}
+                    role="tab"
+                    aria-selected={index === criteriaSlideIndex}
+                    aria-label={`Show example ${index + 1}: ${slide.caption}`}
+                  />
+                ))}
+              </div>
+              <button type="button" className="cs-media-carousel__button" onClick={showNextCriteriaSlide} aria-label="Show next Criteria Engine example">
+                →
+              </button>
+            </div>
           </div>
         </div>
       </section>
