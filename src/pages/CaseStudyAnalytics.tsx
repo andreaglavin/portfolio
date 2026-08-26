@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import type { ChangeEvent, CSSProperties, SyntheticEvent } from 'react';
 import { CaseStudyLayout } from './CaseStudyLayout';
 import { backToWorkSection } from './backToWorkSection';
 
@@ -25,9 +26,18 @@ const criteriaEngineSlides = [
   },
 ];
 
+const formatTime = (seconds: number) => {
+  if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${String(secs).padStart(2, '0')}`;
+};
+
 export function CaseStudyAnalytics() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
   const [criteriaSlideIndex, setCriteriaSlideIndex] = useState(0);
 
   const togglePlay = () => {
@@ -35,6 +45,21 @@ export function CaseStudyAnalytics() {
     if (!v) return;
     if (v.paused) v.play();
     else v.pause();
+  };
+
+  const handleLoadedMetadata = (e: SyntheticEvent<HTMLVideoElement>) => {
+    setDuration(e.currentTarget.duration);
+  };
+
+  const handleTimeUpdate = (e: SyntheticEvent<HTMLVideoElement>) => {
+    setProgress(e.currentTarget.currentTime);
+  };
+
+  const handleScrub = (e: ChangeEvent<HTMLInputElement>) => {
+    const time = Number(e.target.value);
+    const v = videoRef.current;
+    if (v) v.currentTime = time;
+    setProgress(time);
   };
 
   const showPreviousCriteriaSlide = () => {
@@ -511,47 +536,81 @@ export function CaseStudyAnalytics() {
               <img src="assets/Oppo9.png" alt="Criteria Engine — Convergence preset showing a multi-row builder" className="cs-inline-img" />
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="cs-media-carousel" aria-roledescription="carousel" aria-label="Criteria Engine examples">
-            <div className="cs-media-carousel__viewport">
-              <figure className="cs-img-figure cs-media-carousel__slide">
-                <img
-                  src={criteriaEngineSlides[criteriaSlideIndex].src}
-                  alt={criteriaEngineSlides[criteriaSlideIndex].alt}
-                  className="cs-inline-img"
-                />
-                <figcaption className="cs-img-caption cs-img-caption--accent">
-                  {criteriaEngineSlides[criteriaSlideIndex].caption}
-                </figcaption>
-              </figure>
-            </div>
-            <div className="cs-media-carousel__controls">
-              <button type="button" className="cs-media-carousel__button" onClick={showPreviousCriteriaSlide} aria-label="Show previous Criteria Engine example">
-                ←
+      {/* ========== PROTOTYPE ========== */}
+      <section className="cs-section cs-bg-base">
+        <div className="section-container">
+          <div className="cs-section-header-centered">
+            <span className="cs-section-label">Prototype</span>
+            <h2>End-to-end Opportunities flow</h2>
+            <p>Figma Make prototype of the Criteria Engine on the Opportunities page.</p>
+          </div>
+          <div className="cs-video-wrap">
+            <video
+              ref={videoRef}
+              src="assets/CriteriaEngine-prototype-video.mp4"
+              className="cs-hero-img"
+              loop
+              muted
+              playsInline
+              onClick={togglePlay}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onLoadedMetadata={handleLoadedMetadata}
+              onTimeUpdate={handleTimeUpdate}
+            />
+            <button
+              type="button"
+              className={`cs-video-playbtn${isPlaying ? ' is-playing' : ''}`}
+              onClick={togglePlay}
+              aria-label="Play video"
+              tabIndex={isPlaying ? -1 : 0}
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M8 5.5v13a1 1 0 0 0 1.55.83l10-6.5a1 1 0 0 0 0-1.66l-10-6.5A1 1 0 0 0 8 5.5z" />
+              </svg>
+            </button>
+            <div
+              className="cs-media-pill cs-video-scrubber"
+              style={{ '--cs-scrub-pct': `${duration ? (progress / duration) * 100 : 0}%` } as CSSProperties}
+            >
+              <button
+                type="button"
+                className="cs-video-toggle"
+                onClick={togglePlay}
+                aria-label={isPlaying ? 'Pause video' : 'Play video'}
+              >
+                {isPlaying ? (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <rect x="6" y="5" width="4" height="14" rx="1" />
+                    <rect x="14" y="5" width="4" height="14" rx="1" />
+                  </svg>
+                ) : (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M8 5.5v13a1 1 0 0 0 1.55.83l10-6.5a1 1 0 0 0 0-1.66l-10-6.5A1 1 0 0 0 8 5.5z" />
+                  </svg>
+                )}
               </button>
-              <div className="cs-media-carousel__dots" role="tablist" aria-label="Choose a Criteria Engine example">
-                {criteriaEngineSlides.map((slide, index) => (
-                  <button
-                    key={slide.src}
-                    type="button"
-                    className={`cs-media-carousel__dot${index === criteriaSlideIndex ? ' is-active' : ''}`}
-                    onClick={() => setCriteriaSlideIndex(index)}
-                    role="tab"
-                    aria-selected={index === criteriaSlideIndex}
-                    aria-label={`Show example ${index + 1}: ${slide.caption}`}
-                  />
-                ))}
-              </div>
-              <button type="button" className="cs-media-carousel__button" onClick={showNextCriteriaSlide} aria-label="Show next Criteria Engine example">
-                →
-              </button>
+              <input
+                type="range"
+                className="cs-video-scrub"
+                min={0}
+                max={duration || 0}
+                step={0.01}
+                value={progress}
+                onChange={handleScrub}
+                aria-label="Seek video"
+              />
+              <span className="cs-video-time">{formatTime(progress)} / {formatTime(duration)}</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========== CRITERIA ENGINE — sentence builder visual ========== */}
-      <section className="cs-section cs-bg-base">
+      <section className="cs-section cs-bg-alt">
         <div className="section-container">
           <div className="cs-section-header-centered">
             <span className="cs-section-label">How it composes</span>
@@ -571,46 +630,45 @@ export function CaseStudyAnalytics() {
             <span className="cs-sentence-chip">Threshold</span>
           </div>
           <p className="cs-sentence-caption">e.g. "Stall rate vs #1 competitor &gt; 20% in regions with &gt; 100k subs"</p>
-        </div>
-      </section>
 
-      {/* ========== PROTOTYPE ========== */}
-      <section className="cs-section cs-bg-alt">
-        <div className="section-container">
-          <div className="cs-section-header-centered">
-            <span className="cs-section-label">Prototype</span>
-            <h2>End-to-end Opportunities flow</h2>
-            <p>Figma Make prototype of the Criteria Engine on the Opportunities page.</p>
-          </div>
-          <div className="cs-video-wrap">
-            <video
-              ref={videoRef}
-              src="assets/CriteriaEngine-prototype-video.mp4"
-              className="cs-hero-img"
-              loop
-              muted
-              playsInline
-              onClick={togglePlay}
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-            />
-            <button
-              type="button"
-              className={`cs-video-playbtn${isPlaying ? ' is-playing' : ''}`}
-              onClick={togglePlay}
-              aria-label={isPlaying ? 'Pause video' : 'Play video'}
-            >
-              {isPlaying ? (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <rect x="6" y="5" width="4" height="14" rx="1" />
-                  <rect x="14" y="5" width="4" height="14" rx="1" />
-                </svg>
-              ) : (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M8 5.5v13a1 1 0 0 0 1.55.83l10-6.5a1 1 0 0 0 0-1.66l-10-6.5A1 1 0 0 0 8 5.5z" />
-                </svg>
-              )}
-            </button>
+          <div className="cs-media-carousel" aria-roledescription="carousel" aria-label="Criteria Engine examples">
+            <div className="cs-media-carousel__viewport">
+              <figure className="cs-img-figure cs-media-carousel__slide">
+                <div className="cs-media-carousel__frame">
+                  <img
+                    src={criteriaEngineSlides[criteriaSlideIndex].src}
+                    alt={criteriaEngineSlides[criteriaSlideIndex].alt}
+                    className="cs-inline-img"
+                  />
+                  <button type="button" className="cs-media-carousel__button cs-media-carousel__button--prev" onClick={showPreviousCriteriaSlide} aria-label="Show previous Criteria Engine example">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M15 5.5 8.5 12l6.5 6.5" />
+                    </svg>
+                  </button>
+                  <button type="button" className="cs-media-carousel__button cs-media-carousel__button--next" onClick={showNextCriteriaSlide} aria-label="Show next Criteria Engine example">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M9 5.5 15.5 12 9 18.5" />
+                    </svg>
+                  </button>
+                  <div className="cs-media-pill cs-media-carousel__dots" role="tablist" aria-label="Choose a Criteria Engine example">
+                    {criteriaEngineSlides.map((slide, index) => (
+                      <button
+                        key={slide.src}
+                        type="button"
+                        className={`cs-media-carousel__dot${index === criteriaSlideIndex ? ' is-active' : ''}`}
+                        onClick={() => setCriteriaSlideIndex(index)}
+                        role="tab"
+                        aria-selected={index === criteriaSlideIndex}
+                        aria-label={`Show example ${index + 1}: ${slide.caption}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <figcaption className="cs-img-caption cs-img-caption--accent">
+                  {criteriaEngineSlides[criteriaSlideIndex].caption}
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
