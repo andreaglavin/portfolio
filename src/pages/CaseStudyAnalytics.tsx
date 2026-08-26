@@ -320,24 +320,8 @@ export function CaseStudyAnalytics() {
         </div>
       </section>
 
-      {/* ========== INITIAL EXPLORATION ========== */}
-      <section className="cs-section cs-bg-alt">
-        <div className="section-container">
-          <div className="cs-two-col cs-two-col-media cs-two-col-media--lg">
-            <div className="cs-col">
-              <span className="cs-section-label">Initial Exploration</span>
-              <h2>Dedicated Opportunities page</h2>
-              <p>We began exploring the consolidation of opportunities into a dedicated global page, but after weighing the pros and cons, we decided to pivot and surface opportunities on the landing page instead.</p>
-            </div>
-            <div className="cs-col cs-col-media">
-              <img src="assets/oppo1.png" alt="Initial exploration — dedicated Opportunities page concept" className="cs-inline-img" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ========== ENTRY POINTS & ARCHETYPES ========== */}
-      <section className="cs-section cs-bg-base">
+      <section className="cs-section cs-bg-alt">
         <div className="section-container">
           <div className="cs-section-header-centered">
             <span className="cs-section-label">Decision Matrix</span>
@@ -409,6 +393,22 @@ export function CaseStudyAnalytics() {
       {/* ========== PHASE 1 FEATURES ========== */}
       <section className="cs-bg-base cs-phase1-features">
         <div className="section-container">
+
+          {/* Feature: Initial exploration (text left) */}
+          <div className="cs-feature">
+            <div className="cs-two-col cs-two-col-media">
+              <div className="cs-col">
+                <span className="cs-feature-eyebrow">Initial Exploration</span>
+                <h3>Dedicated Opportunities&nbsp;page</h3>
+                <p>We began exploring the consolidation of opportunities into a dedicated global page, but after weighing the pros and cons using a decision matrix, we decided to pivot and surface opportunities on the landing page instead.</p>
+              </div>
+              <div className="cs-col cs-col-media">
+                <div className="cs-opportunities-zoom" tabIndex={0} aria-label="Hover or focus to zoom into the dedicated Opportunities page">
+                  <img src="assets/oppo1.png" alt="Initial exploration — dedicated Opportunities page concept" className="cs-inline-img" />
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Feature: Opportunities widget (image left) */}
           <div className="cs-feature">
@@ -545,7 +545,7 @@ export function CaseStudyAnalytics() {
           <div className="cs-section-header-centered">
             <span className="cs-section-label">Prototype</span>
             <h2>End-to-end Opportunities flow</h2>
-            <p>Figma Make prototype of the Criteria Engine on the Opportunities page.</p>
+            <p>The system was implemented in the second phase of the project, when we introduced the dedicated Opportunities page.</p>
           </div>
           <div className="cs-video-wrap">
             <video
