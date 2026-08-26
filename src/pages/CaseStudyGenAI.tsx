@@ -306,19 +306,19 @@ export function CaseStudyGenAI() {
               <div className="cs-col">
                 <span className="cs-decision-num">04</span>
                 <h3>Displaying Any Metric</h3>
-                <p>A flexible pattern for both product and derived/custom metrics—a new capability unlocked by AI. It keeps the formula behind each result transparent, with extra detail revealed on hover to avoid overwhelming users.</p>
-                <p>Current three-tier visual hierarchy:</p>
+                <p>A flexible pattern that works at two levels of complexity:</p>
                 <ul className="cs-list cs-list-compact">
-                  <li><strong>Operands</strong> — the data.</li>
-                  <li><strong>Operators</strong> (e.g., -, &lt;) — the connectors (slightly darker).</li>
-                  <li><strong>Values</strong> (e.g., 10) — the editable elements (blue background).</li>
+                  <li><strong>Resolving a question</strong> to an existing metric.</li>
+                  <li><strong>Composing a brand-new metric</strong> when nothing quite fits.</li>
                 </ul>
+                <p>Either way, the formula is laid out in plain language and every threshold stays editable — so users can see exactly how the AI understood them, and adjust it without starting the prompt over.</p>
+                <p>Hovering any token opens its full definition, keeping that detail one step away instead of crowding the panel.</p>
               </div>
               <div className="cs-col cs-col-media">
                 <div className="cs-image-pair">
-                  <img src="assets/ai-query-download-speed.png" alt="Explore Maps with AI — download speed filter" />
+                  <img src="assets/Panel new 1.png" alt="Explore Maps with AI — download speed filtering criteria" />
                   <div className="cs-image-tooltip-trigger">
-                    <img src="assets/ai-query-conversation.png" alt="Explore Maps with AI — custom derived metric" />
+                    <img src="assets/Panel new 2.png" alt="Explore Maps with AI — custom derived metric with metric definition and filtering criteria" />
                     <div className="cs-image-tooltip">
                       <img src="assets/22.png" alt="Filter token details" />
                     </div>

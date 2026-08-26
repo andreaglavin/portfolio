@@ -2263,6 +2263,8 @@ video.cs-img-lg {
 
 /* Side-by-side image pair within a feature row */
 .cs-image-pair {
+    /* Decision 04 "Displaying Any Metric": panels run 5% larger than the shared mockup width */
+    --cs-media-w: 247.8px;
     display: flex;
     gap: 16px;
     align-items: flex-start;
@@ -2297,7 +2299,8 @@ video.cs-img-lg {
 .cs-image-tooltip {
     position: absolute;
     z-index: 1;
-    top: 53%;
+    /* Top edge aligns with the first "Latency" token in the metric definition */
+    top: 55.9%;
     left: 100%;
     width: 140px;
     height: auto;
