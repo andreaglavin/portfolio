@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { HomeIcon } from '@/components/icons/HomeIcon';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { useScrolled } from '@/hooks/useScrolled';
 
@@ -37,7 +36,7 @@ export function Nav({ alwaysScrolled = false, minimal = false }: NavProps) {
       <nav className={`nav${isScrolled ? ' scrolled' : ''}`} id="nav">
         <div className="nav-inner">
           <Link to="/" className="nav-logo" aria-label="Home" onClick={scrollHomeToTop}>
-            <HomeIcon />
+            <img src="assets/Andrea-icon.png" alt="" className="nav-logo-img" />
           </Link>
 
           {minimal ? (

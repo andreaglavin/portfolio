@@ -13,7 +13,7 @@ export function AINative() {
         <div className="section-header">
           <p className="section-label">Design Approach</p>
           <h2 className="section-title">AI-Native<br />Design Process</h2>
-          <p className="section-subtitle">My <em>workflow</em> integrates AI at every stage, from research and ideation to prototyping and delivery, enabling faster iteration and deeper insight.</p>
+          <p className="section-subtitle">My <em>workflow</em> integrates AI at every stage, from research and ideation to prototyping and delivery, enabling faster iteration and deeper insights.</p>
         </div>
 
         <div className="ai-philosophy">
@@ -57,11 +57,11 @@ export function AINative() {
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><ChatGPTIcon /></div>
-              <span className="ai-tool-name">ChatGPT – Codex</span>
+              <span className="ai-tool-name">ChatGPT<br />Codex</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><ClaudeIcon /></div>
-              <span className="ai-tool-name">Claude Design – Code</span>
+              <span className="ai-tool-name">Claude<br />Design + Code</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><CursorIcon /></div>
