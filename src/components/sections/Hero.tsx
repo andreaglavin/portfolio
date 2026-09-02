@@ -3,12 +3,12 @@ export function Hero() {
     <section className="hero" id="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <p className="hero-label">Product Designer</p>
+          <p className="hero-label">Andrea Gomez</p>
           <h1 className="hero-title">
-            Designing products that people <em>love</em> to use.
+            Making complex technology feel simple and <em>human</em>.
           </h1>
           <p className="hero-description">
-            Hi! I'm Andrea — a product designer who loves untangling complex problems and using AI-native workflows to make tech feel seamless and human for everyone.
+            Hi! I’m Andrea — a product designer with a psychology background who loves understanding how people think, untangling complex problems, and using AI to create experiences that feel intuitive and effortless.
           </p>
           <div className="hero-actions">
             <a href="#work" className="btn btn-primary">View My Work</a>
