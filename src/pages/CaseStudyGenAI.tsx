@@ -122,7 +122,7 @@ export function CaseStudyGenAI() {
               </div>
               <div className="cs-phase-content">
                 <h3>Pilot & Launch</h3>
-                <p>We integrated a GenAI filtering panel into the existing Maps interface — the product's most frequently used surface. After testing with 3 pilot partners and meeting our initial goals, we successfully launched the feature.</p>
+                <p>We integrated a GenAI filtering panel into the existing Maps interface — the product's most frequently used and interactive surface. After testing with 3 pilot partners and meeting our initial goals, we successfully launched the feature.</p>
               </div>
             </div>
           </div>
@@ -161,6 +161,7 @@ export function CaseStudyGenAI() {
             <img src="assets/1b.jpg" alt="GenAI filtering panel interface" className="cs-inline-img" />
             <img src="assets/11.png" alt="GenAI filtering panel interaction" className="cs-inline-img" />
             <img src="assets/7b.jpg" alt="GenAI filtering panel results" className="cs-inline-img" />
+            <img src="assets/1d.png" alt="GenAI filtering panel detail" className="cs-inline-img" />
           </div>
         </div>
       </section>

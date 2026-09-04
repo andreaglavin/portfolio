@@ -1,6 +1,7 @@
 import {
   ChatGPTIcon,
   ClaudeIcon,
+  CodexIcon,
   CursorIcon,
   FigmaIcon,
   VsCodeIcon,
@@ -35,7 +36,7 @@ export function AINative() {
               </svg>
             </div>
             <h3>Rapid Prototyping</h3>
-            <p>I use AI to rapidly explore design directions, build high-fidelity prototypes, and validate ideas faster.</p>
+            <p>I rapidly explore design directions, build high-fidelity prototypes, and use AI to validate ideas faster.</p>
           </div>
           <div className="ai-philosophy-card">
             <div className="ai-philosophy-icon">
@@ -44,7 +45,7 @@ export function AINative() {
               </svg>
             </div>
             <h3>Design-to-Code</h3>
-            <p>I use AI to turn designs into working code, improve quality, reduce back-and-forth with engineering, and accelerate delivery from concept to production.</p>
+            <p>I turn designs into working code, improve quality, reduce back-and-forth with engineering, and accelerate delivery from concept to production.</p>
           </div>
         </div>
 
@@ -52,16 +53,20 @@ export function AINative() {
           <h3 className="ai-tools-title">My AI Toolkit</h3>
           <div className="ai-tools-grid">
             <div className="ai-tool-item ai-tool-compact">
+              <div className="ai-tool-icon"><ChatGPTIcon /></div>
+              <span className="ai-tool-name">ChatGPT</span>
+            </div>
+            <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><FigmaIcon /></div>
               <span className="ai-tool-name">Figma Make</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
-              <div className="ai-tool-icon"><ChatGPTIcon /></div>
-              <span className="ai-tool-name">ChatGPT<br />Codex</span>
+              <div className="ai-tool-icon"><ClaudeIcon /></div>
+              <span className="ai-tool-name">Claude</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
-              <div className="ai-tool-icon"><ClaudeIcon /></div>
-              <span className="ai-tool-name">Claude<br />Design + Code</span>
+              <div className="ai-tool-icon"><CodexIcon /></div>
+              <span className="ai-tool-name">Codex</span>
             </div>
             <div className="ai-tool-item ai-tool-compact">
               <div className="ai-tool-icon"><CursorIcon /></div>

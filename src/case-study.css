@@ -366,10 +366,9 @@
 
 .cs-solution-image-grid {
     display: grid;
-    grid-template-columns: repeat(3, var(--cs-media-w));
-    gap: 64px;
-    width: fit-content;
-    margin: 96px auto 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 96px 0 0;
 }
 
 /* Image with caption */
@@ -2495,6 +2494,20 @@ video.cs-img-lg {
     .cs-feature .cs-two-col-media:has(> .cs-col-media:first-child) {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    /* Key Design Decisions: the desktop rules below are more specific than the
+       shared .cs-two-col-media collapse above, so restate them here — otherwise
+       these rows stay side by side on mobile and squeeze the copy. */
+    .cs-decision .cs-two-col-media,
+    .cs-decision .cs-two-col-media:has(> .cs-col-media:first-child) {
+        grid-template-columns: 1fr;
+    }
+
+    /* The alternating sides are done with direction: rtl; stacked, that would put
+       the media above the copy. Text first, image underneath. */
+    .cs-decision:nth-of-type(odd) .cs-two-col-media {
+        direction: ltr;
     }
 
     .cs-decision-reversed .cs-two-col-media {
